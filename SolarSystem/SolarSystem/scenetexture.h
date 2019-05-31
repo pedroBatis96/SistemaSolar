@@ -35,6 +35,7 @@ private:
 	void setMatrices();
 	void compileAndLinkShader();
 
+
 public:
 	SceneTexture();
 	GLuint textL;
@@ -49,8 +50,8 @@ public:
 	void render();
 	void resize(int, int);
 	void textureLoad(GLubyte*, int, int);
-	void renderPlanet(float[3], float[9], float);
-	void renderSun(float[3], float[9], float);
+	void renderBK(float);
+	void renderPlanet(float[3], float[9], float, GLfloat, GLfloat);
 	void calcPlanetLocations();
 	void calcMoonLocation();
 };

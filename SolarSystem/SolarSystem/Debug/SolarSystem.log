@@ -1,17 +1,2 @@
-﻿  glad.cpp
-  glslprogram.cpp
-  glutils.cpp
-  main.cpp
-  objmesh.cpp
-C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\objmesh.cpp(149,39): warning C4018:  '<': signed/unsigned mismatch
-  scenetexture.cpp
-C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\objmesh.cpp(169,23): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(262,7): warning C4101:  'translate': unreferenced local variable
-C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(264,7): warning C4101:  'rotate': unreferenced local variable
-C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(275,7): warning C4101:  'translate': unreferenced local variable
-  texture.cpp
-  trianglemesh.cpp
-  Generating Code...
-C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(277,7): warning C4101:  'rotate': unreferenced local variable
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  SolarSystem.vcxproj -> C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\Debug\SolarSystem.exe
+﻿  main.cpp
+  SolarSystem.vcxproj -> C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\Debug\SolarSystem.exe
