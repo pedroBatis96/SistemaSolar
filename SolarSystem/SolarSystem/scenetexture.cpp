@@ -10,124 +10,113 @@ using std::cerr;
 using glm::vec3;
 using glm::mat4;
 
-bool SceneTexture::paused = false, SceneTexture::is2d=false;
+bool SceneTexture::paused = false, SceneTexture::is2d = false , SceneTexture::isMenu = false , SceneTexture::retry = false;
+int SceneTexture::selected = 0;
 GLFWwindow* window;
 mat4 translate, scale,rotate;
-GLfloat SceneTexture::camx = 2500.0f, SceneTexture::camz = 500.0f;
+GLfloat SceneTexture::camx = 2500.0f, SceneTexture::camy = 500.0f, SceneTexture::camz = 0.0f, SceneTexture::eyex = 0.0f, SceneTexture::eyey = 0.0f, SceneTexture::eyez = 0.0f;
 glm::mat4 modelAux, viewAux, projectionAux;
 float x = 0,xplus = 100;
 
-namespace St {
-	float starLocation[1][3]{ {0.0f, 0.0f , 0.0f} };
-	float starRadius = 10.0f;
-	float starLight[1][9]{ { 1.f, 1.f, 1.f,1.f, 1.f, 1.f,1.f, 1.f, 1.f} };
-	GLfloat rotation = 100.f;
-	float starColor[1][3] = { {1.0f, 1.0f , 1.0f}, };
-}
 
-namespace Bk {
-	float starLocation[1][3]{ {0.0f, 0.0f , 0.0f} };
-	float starRadius = 150.0f;
-	float starLight[1][9]{ { 1.0f, 1.0f, 1.0f,1.0f, 1.0f, 1.0f,1.0f, 1.0f, 1.0f} };
-	float starColor[1][3] = { {1.0f, 1.0f , 1.0f}, };
-}
+//Planetas-------------------------------------
+float SceneTexture::planetlocations[8][3] = {
+	{0.0f, 0.f, 597.0f}, //Mercurio
+	{0.0f, 0.f, 748.0f}, // Venus
+	{0.0f, 0.f, 889.0f}, // Terra
+	{0.0f, 0.f, 1147.0f}, // Marte 
+	{0.0f, 0.f, 1570.0f}, // Jupiter
+	{0.0f, 0.f, 2150.0f}, //Saturno
+	{0.0f, 0.f, 2590.0f}, // Urano
+	{0.0f, 0.f, 2820.0f} //Neptuno
+};
+float SceneTexture::planetDefaultlocations[8][3] = {
+	{0.0f, 0.f, 597.0f}, //Mercurio
+	{0.0f, 0.f, 748.0f}, // Venus
+	{0.0f, 0.f, 889.0f}, // Terra
+	{0.0f, 0.f, 1147.0f}, // Marte 
+	{0.0f, 0.f, 1570.0f}, // Jupiter
+	{0.0f, 0.f, 2150.0f}, //Saturno
+	{0.0f, 0.f, 2590.0f}, // Urano
+	{0.0f, 0.f, 2820.0f} //Neptuno
+};
+GLfloat SceneTexture::planetRotation[8] = { 10.f,20.f,30.f,40.f,50.f,60.f,70.f,80.f };
+//Luz
+float SceneTexture::planetLight[8][9]{
+	{0.8f, 0.8f, 0.8f,0.8f, 0.8f, 0.8f,0.7f, 0.7f, 0.7f},
+	{0.7f, 0.7f, 0.8f,0.7f, 0.7f, 0.7f,0.6f, 0.6f, 0.6f},
+	{0.6f, 0.6f, 0.6f,0.6f, 0.6f, 0.6f,0.5f, 0.5f, 0.5f},
+	{0.5f, 0.5f, 0.5f,0.5f, 0.5f, 0.5f,0.4f, 0.4f, 0.4f},
+	{0.3f, 0.3f, 0.3f,0.4f, 0.4f, 0.4f,0.3f, 0.3f, 0.3f},
+	{0.3f, 0.3f, 0.3f,0.3f, 0.3f, 0.3f,0.2f, 0.2f, 0.2f},
+	{0.3f, 0.3f, 0.3f,0.2f, 0.2f, 0.2f,0.2f, 0.2f, 0.2f},
+	{0.2f, 0.2f, 0.2f,0.1f, 0.1f, 0.1f,0.2f, 0.2f, 0.2f}
+};
+// Radius de 8 planetas
+float SceneTexture::planetRadius[8] = {
+	0.18f,//Mercurio
+	0.44f,//Venus
+	0.46f,//Terra
+	0.24f,//Marte
+	5.15f,//Jupiter
+	3.0f,//Saturno
+	1.86f,//Urano
+	1.80f//Neptuno
+};
+// Velocidade de 8 planetas
+float SceneTexture::planetSpeed[8] = {
+	10.0f,
+	5.2f,
+	4.0f,
+	2.3f,
+	1.84f,
+	2.0f,
+	2.12f,
+	2.22f
+};
+// Angulo de 8 planetas
+float SceneTexture::planetAngle[8] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+// Store the distances to the star of the 6 spheres
+float SceneTexture::planetDistance[8] = {
+	597.0f,
+	748.0f,
+	889.0f,
+	1147.0f,
+	1570.0f,
+	2150.0f,
+	2590.0f,
+	2820.0f
+}; // Distancia ao sol.
 
-namespace Pl {
-	// Localiza��o de 8 Planetas
-	float planetlocations[8][3] = {
-		{0.0f, 0.f, 597.0f}, //Mercurio
-		{0.0f, 0.f, 748.0f}, // Venus
-		{0.0f, 0.f, 889.0f}, // Terra
-		{0.0f, 0.f, 1147.0f}, // Marte 
-		{0.0f, 0.f, 1570.0f}, // Jupiter
-		{0.0f, 0.f, 2150.0f}, //Saturno
-		{0.0f, 0.f, 2590.0f}, // Urano
-		{0.0f, 0.f, 2820.0f} //Neptuno
-	};
+//Lua--------------------------------
+float SceneTexture::moonTransCenter[1][3] = { SceneTexture::planetlocations[2][0], SceneTexture::planetlocations[2][1], SceneTexture::planetlocations[2][2] };
+// Localizacao de luas
+float SceneTexture::moonlocations[1][3] = { { moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 30.0f} };
+float SceneTexture::moonDefaultLocation[1][3] = { { moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 30.0f} };
+GLfloat SceneTexture::moonRotation = 10.f;
+// Raio da lua
+float SceneTexture::moonRadius[1] = { 0.1f };
+// Angulo da lua
+float SceneTexture::moonAngle[1] = { 0.0f };
+float SceneTexture::moonLight[1][9]{ {0.9f, 0.9f, 0.9f,0.95f, 0.95f, 0.95f,0.1f, 0.1f, 0.1f} };
+// distancia ao planeta
+float SceneTexture::moonDistance[1] = { 30.0f };
+//velocidade da lua
+float SceneTexture::moonSpeed[1] = { 100.0f };
 
-	float planetDefaultlocations[8][3] = {
-		{0.0f, 0.f, 597.0f}, //Mercurio
-		{0.0f, 0.f, 748.0f}, // Venus
-		{0.0f, 0.f, 889.0f}, // Terra
-		{0.0f, 0.f, 1147.0f}, // Marte 
-		{0.0f, 0.f, 1570.0f}, // Jupiter
-		{0.0f, 0.f, 2150.0f}, //Saturno
-		{0.0f, 0.f, 2590.0f}, // Urano
-		{0.0f, 0.f, 2820.0f} //Neptuno
-	};
+//Background------------------------------------------------------------------------
+float SceneTexture::bkLocation[1][3]{ {0.0f, 0.0f , 0.0f} };
+float SceneTexture::bkRadius = 150.0f;
+float SceneTexture::bkLight[1][9]{ { 1.0f, 1.0f, 1.0f,1.0f, 1.0f, 1.0f,1.0f, 1.0f, 1.0f} };
+float SceneTexture::bkColor[1][3] = { {1.0f, 1.0f , 1.0f}, };
 
-	GLfloat rotation[8] = { 10.f,20.f,30.f,40.f,50.f,60.f,70.f,80.f };
 
-	//Luz
-	float planetLight[8][9]{ 
-		{0.8f, 0.8f, 0.8f,0.8f, 0.8f, 0.8f,0.7f, 0.7f, 0.7f},
-		{0.7f, 0.7f, 0.8f,0.7f, 0.7f, 0.7f,0.6f, 0.6f, 0.6f},
-		{0.6f, 0.6f, 0.6f,0.6f, 0.6f, 0.6f,0.5f, 0.5f, 0.5f},
-		{0.5f, 0.5f, 0.5f,0.5f, 0.5f, 0.5f,0.4f, 0.4f, 0.4f},
-		{0.3f, 0.3f, 0.3f,0.4f, 0.4f, 0.4f,0.3f, 0.3f, 0.3f},
-		{0.3f, 0.3f, 0.3f,0.3f, 0.3f, 0.3f,0.2f, 0.2f, 0.2f},
-		{0.3f, 0.3f, 0.3f,0.2f, 0.2f, 0.2f,0.2f, 0.2f, 0.2f},
-		{0.2f, 0.2f, 0.2f,0.1f, 0.1f, 0.1f,0.2f, 0.2f, 0.2f}
-	};
-
-	// Radius de 8 planetas
-	float planetRadius[8] = {
-		0.18f,//Mercurio
-		0.44f,//Venus
-		0.46f,//Terra
-		0.24f,//Marte
-		5.15f,//Jupiter
-		3.0f,//Saturno
-		1.86f,//Urano
-		1.80f//Neptuno
-	};
-
-	// Velocidade de 8 planetas
-	float planetSpeed[8] = {
-		10.0f,
-		5.2f,
-		4.0f,
-		2.3f,
-		1.84f,
-		2.0f,
-		2.12f,
-		2.22f
-	};
-
-	// Angulo de 8 planetas
-	float planetAngle[8] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
-	// Store the distances to the star of the 6 spheres
-	float planetDistance[8] = {
-		597.0f,
-		748.0f,
-		889.0f,
-		1147.0f,
-		1570.0f,
-		2150.0f,
-		2590.0f,
-		2820.0f
-	}; // Distancia ao sol.
-}
-namespace Moon {
-	float moonTransCenter[1][3] = { Pl::planetlocations[2][0], Pl::planetlocations[2][1], Pl::planetlocations[2][2] };
-	// Localizacao de luas
-	float moonlocations[1][3] = {
-		{ moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 30.0f}
-	};
-
-	float moonDefaultLocation[1][3] = {{ moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 30.0f}};
-
-	GLfloat rotation = 10.f;
-	// Raio da lua
-	float moonRadius[1] = { 0.1f };
-	// Angulo da lua
-	float moonAngle[1] = { 0.0f };
-	float moonLight[1][9]{ {0.9f, 0.9f, 0.9f,0.95f, 0.95f, 0.95f,0.1f, 0.1f, 0.1f} };
-	// distancia ao planeta
-	float moonDistance[1] = { 30.0f };
-	//velocidade da lua
-	float moonSpeed[1] = { 7.0f };
-}
+//Sol-------------------------------------------------------------------------------
+float SceneTexture::starLocation[1][3]{ {0.0f, 0.0f , 0.0f} };
+float SceneTexture::starRadius = 10.0f;
+float SceneTexture::starLight[1][9]{ { 1.f, 1.f, 1.f,1.f, 1.f, 1.f,1.f, 1.f, 1.f} };
+GLfloat SceneTexture::rotation = 100.f;
+float SceneTexture::starColor[1][3] = { {1.0f, 1.0f , 1.0f}, };
 
 
 SceneTexture::SceneTexture() {
@@ -154,7 +143,7 @@ void SceneTexture::initScene()
     glEnable(GL_DEPTH_TEST);
 
 	view = glm::lookAt(
-		glm::vec3(camx, 1000.0f, camz), //Camera esta
+		glm::vec3(camx, camy, camz), //Camera esta
 		glm::vec3(0, 0, 0), //Esta a olhar para
 		glm::vec3(1, 0, 1)  //Posicao da cabeca
 	);
@@ -182,8 +171,8 @@ void SceneTexture::render()
 	}
 	else {
 		view = glm::lookAt(
-			glm::vec3(camx, camz, 0.f), //Camera esta
-			glm::vec3(0, 0, 0), //Esta a olhar para
+			glm::vec3(camx, camy, camz), //Camera esta
+			glm::vec3(eyex,eyey,eyez), //Esta a olhar para
 			glm::vec3(0, 1, 0)  //Posicao da cabeca
 		);
 	}
@@ -194,67 +183,67 @@ void SceneTexture::render()
 
 	calcPlanetLocations();
 	calcMoonLocation();
-	renderPlanet(St::starLocation[0],St::starLight[0],St::starRadius, (GLfloat)glfwGetTime(),St::rotation);
+	renderPlanet(SceneTexture::starLocation[0],SceneTexture::starLight[0],SceneTexture::starRadius, (GLfloat)glfwGetTime(),SceneTexture::rotation);
 	textureLoad(texSun, sSun, tSun);
 	setMatrices();
 	venus->render();
 
 	//Lua
-	renderPlanet(Moon::moonlocations[0], Moon::moonLight[0], Moon::moonRadius[0], (GLfloat)glfwGetTime(),Moon::rotation);
+	renderPlanet(SceneTexture::moonlocations[0], SceneTexture::moonLight[0], SceneTexture::moonRadius[0], (GLfloat)glfwGetTime(),SceneTexture::moonRotation);
 	textureLoad(texMoon, sMoon, tMoon);
 	setMatrices();
 	venus->render();
 
 	//Mercurio
-	renderPlanet(Pl::planetlocations[0], Pl::planetLight[0], Pl::planetRadius[0], (GLfloat)glfwGetTime(), Pl::rotation[0]);
+	renderPlanet(SceneTexture::planetlocations[0], SceneTexture::planetLight[0], SceneTexture::planetRadius[0], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[0]);
 	textureLoad(texMercury, sMercury, tMercury);
 	setMatrices();
 	venus->render();
 
 	//Venus
-	renderPlanet(Pl::planetlocations[1], Pl::planetLight[1], Pl::planetRadius[1], (GLfloat)glfwGetTime(), Pl::rotation[1]);
+	renderPlanet(SceneTexture::planetlocations[1], SceneTexture::planetLight[1], SceneTexture::planetRadius[1], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[1]);
 	textureLoad(texVenus, sVenus, tVenus);
 	setMatrices();
 	venus->render();
 
 	//Terra
-	renderPlanet(Pl::planetlocations[2], Pl::planetLight[2], Pl::planetRadius[2], (GLfloat)glfwGetTime(), Pl::rotation[2]);
+	renderPlanet(SceneTexture::planetlocations[2], SceneTexture::planetLight[2], SceneTexture::planetRadius[2], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[2]);
 	textureLoad(texEarth, sEarth, tEarth);
 	setMatrices();
 	venus->render();
 
 	//Marte
-	renderPlanet(Pl::planetlocations[3], Pl::planetLight[3], Pl::planetRadius[3], (GLfloat)glfwGetTime(), Pl::rotation[3]);
+	renderPlanet(SceneTexture::planetlocations[3], SceneTexture::planetLight[3], SceneTexture::planetRadius[3], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[3]);
 	textureLoad(texMars, sMars, tMars);
 	setMatrices();
 	venus->render();
 
 	//Jupiter
-	renderPlanet(Pl::planetlocations[4], Pl::planetLight[4], Pl::planetRadius[4], (GLfloat)glfwGetTime(), Pl::rotation[4]);
+	renderPlanet(SceneTexture::planetlocations[4], SceneTexture::planetLight[4], SceneTexture::planetRadius[4], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[4]);
 	textureLoad(texJupiter, sJupiter, tJupiter);
 	setMatrices();
 	venus->render();
 
 	//Saturno
-	renderPlanet(Pl::planetlocations[5], Pl::planetLight[5], Pl::planetRadius[5], (GLfloat)glfwGetTime(), Pl::rotation[5]);
+	renderPlanet(SceneTexture::planetlocations[5], SceneTexture::planetLight[5], SceneTexture::planetRadius[5], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[5]);
 	textureLoad(texSaturn, sSaturn, tSaturn);
 	setMatrices();
 	saturn->render();
 
 	//Urano
-	renderPlanet(Pl::planetlocations[6], Pl::planetLight[6], Pl::planetRadius[6], (GLfloat)glfwGetTime(), Pl::rotation[6]);
+	renderPlanet(SceneTexture::planetlocations[6], SceneTexture::planetLight[6], SceneTexture::planetRadius[6], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[6]);
 	textureLoad(texUranus, sUranus, tUranus);
 	setMatrices();
 	venus->render();
 
 	//Neptuno
-	renderPlanet(Pl::planetlocations[7], Pl::planetLight[7], Pl::planetRadius[7], (GLfloat)glfwGetTime(), Pl::rotation[7]);
+	renderPlanet(SceneTexture::planetlocations[7], SceneTexture::planetLight[7], SceneTexture::planetRadius[7], (GLfloat)glfwGetTime(), SceneTexture::planetRotation[7]);
 	textureLoad(texNeptune, sNeptune, tNeptune);
 	setMatrices();
 	venus->render();
 
-	//Neptuno
-	renderBK(Bk::starRadius);
+	//Background
+	renderBK(SceneTexture::bkRadius);
 	textureLoad(texSkyBox, sSkyBox, tSkyBox);
 	setMatrices();
 	venus->render();
@@ -289,6 +278,10 @@ void SceneTexture::setMatrices()
     prog.setUniform("ModelViewMatrix", mv);
     prog.setUniform("NormalMatrix",glm::mat3( vec3(mv[0]), vec3(mv[1]), vec3(mv[2]) ));
     prog.setUniform("MVP", projection * mv);
+}
+
+void SceneTexture::setDefaults() {
+	
 }
 
 void SceneTexture::resize(int w, int h)
@@ -331,12 +324,12 @@ void SceneTexture::calcPlanetLocations() {
 		return;
 	for (int i = 0; i < 8; i++)
 	{
-		Pl::planetAngle[i] += Pl::planetSpeed[i];
-		while (Pl::planetAngle[i] > 360.0)
-			Pl::planetAngle[i] -= 360.0;
-		float tempAngle = (Pl::planetAngle[i] / 180.0f) * 3.14159f;
-		Pl::planetlocations[i][0] = sin(tempAngle) * Pl::planetDistance[i];
-		Pl::planetlocations[i][2] = cos(tempAngle) * Pl::planetDistance[i];
+		SceneTexture::planetAngle[i] += SceneTexture::planetSpeed[i];
+		while (SceneTexture::planetAngle[i] > 360.0)
+			SceneTexture::planetAngle[i] -= 360.0;
+		float tempAngle = (SceneTexture::planetAngle[i] / 180.0f) * 3.14159f;
+		SceneTexture::planetlocations[i][0] = sin(tempAngle) * SceneTexture::planetDistance[i];
+		SceneTexture::planetlocations[i][2] = cos(tempAngle) * SceneTexture::planetDistance[i];
 	}
 }
 
@@ -344,17 +337,17 @@ void SceneTexture::calcMoonLocation() {
 	if (paused)
 		return;
 
-	Moon::moonTransCenter[0][0] = Pl::planetlocations[2][0];
-	Moon::moonTransCenter[0][1] = Pl::planetlocations[2][1];
-	Moon::moonTransCenter[0][2] = Pl::planetlocations[2][2];
+	SceneTexture::moonTransCenter[0][0] = SceneTexture::planetlocations[2][0];
+	SceneTexture::moonTransCenter[0][1] = SceneTexture::planetlocations[2][1];
+	SceneTexture::moonTransCenter[0][2] = SceneTexture::planetlocations[2][2];
 
 
-	Moon::moonAngle[0] += Moon::moonSpeed[0];
+	SceneTexture::moonAngle[0] += SceneTexture::moonSpeed[0];
 
-	while (Moon::moonAngle[0] > 360.0)
-		Moon::moonAngle[0] -= 360.0;
+	while (SceneTexture::moonAngle[0] > 360.0)
+		SceneTexture::moonAngle[0] -= 360.0;
 
-	float tempAngle = (Moon::moonAngle[0] / 180.0f) * 3.14159f;
-	Moon::moonlocations[0][0] = Moon::moonTransCenter[0][0] + sin(tempAngle) * Moon::moonDistance[0];
-	Moon::moonlocations[0][2] = Moon::moonTransCenter[0][2] + cos(tempAngle) * Moon::moonDistance[0];
+	float tempAngle = (SceneTexture::moonAngle[0] / 180.0f) * 3.14159f;
+	SceneTexture::moonlocations[0][0] = SceneTexture::moonTransCenter[0][0] + sin(tempAngle) * SceneTexture::moonDistance[0];
+	SceneTexture::moonlocations[0][2] = SceneTexture::moonTransCenter[0][2] + cos(tempAngle) * SceneTexture::moonDistance[0];
 }
