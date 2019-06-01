@@ -103,12 +103,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/../External Resources\GLM\glm;$(SolutionDir)/../External Resources\GLFW\include;C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\irrKlang-1.6.0\include;$(SolutionDir)/../External Resources\GLM\glm;$(SolutionDir)/../External Resources\GLFW\include;C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)/../External Resources/GLEW/lib/Release/Win32;$(SolutionDir)/../External Resources/GLFW/lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\irrKlang-1.6.0\lib\Win32-visualStudio;$(SolutionDir)/../External Resources/GLEW/lib/Release/Win32;$(SolutionDir)/../External Resources/GLFW/lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -133,14 +133,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/../External Resources\GLM\glm;$(SolutionDir)/../External Resources\GLFW\include;C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\irrKlang-1.6.0\include;$(SolutionDir)/../External Resources\GLM\glm;$(SolutionDir)/../External Resources\GLFW\include;C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)/../External Resources/GLEW/lib/Release/Win32;$(SolutionDir)/../External Resources/GLFW/lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\SolarSystem\irrKlang-1.6.0\lib\Win32-visualStudio;$(SolutionDir)/../External Resources/GLEW/lib/Release/Win32;$(SolutionDir)/../External Resources/GLFW/lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

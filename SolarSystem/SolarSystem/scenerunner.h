@@ -9,11 +9,14 @@
 
 #include <map>
 #include <string>
+#include <irrKlang.h>
+using namespace irrklang;
 
 class SceneRunner {
 private:
 	GLFWwindow* window;
 	int fbw, fbh;
+	ISoundEngine* SoundEngine = createIrrKlangDevice();
 
 public:
 	SceneRunner(const std::string& windowTitle, int width = WIN_WIDTH, int height = WIN_HEIGHT, int samples = 0) {
@@ -67,6 +70,7 @@ public:
 		scene.setDimensions(fbw, fbh);
 		scene.initScene();
 		scene.resize(fbw, fbh);
+		SoundEngine->play2D("background.mp3", GL_TRUE);
 
 		glfwSetKeyCallback(window, SceneTexture::keyfunc);
 
