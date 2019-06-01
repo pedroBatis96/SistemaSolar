@@ -117,161 +117,222 @@ private:
 	}
 };
 
-void  SceneTexture::keyfunc(GLFWwindow* window, int key, int scancode, int action, int mods) {
-	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
-		SceneTexture::paused = !SceneTexture::paused;
+void planetInformation(int selected) {
+	switch (selected) {
+	case -1:
+		printf("Sol\n");
+		printf("Radius : 695,508km\n");
+		printf("Mass : 1,989,100,000,000,000,000,000,000,000,000kg\n");
+		break;
+	case 0:
+		printf("Mercurio\n");
+		printf("Radius : 2,439.7km\n");
+		printf("Mass : 330,104,000,000,000,000,000,000kg\n");
+		break;
+	case 1:
+		printf("Venus\n");
+		printf("Radius : 6,051.8km\n");
+		printf("Mass : 4,867,320,000,000,000,000,000,000kg\n");
+		break;
+	case 2:
+		printf("Terra\n");
+		printf("Radius : 6,371.00km\n");
+		printf("Mass : 5,972,190,000,000,000,000,000,000kg\n");
+		break;
+	case 3:
+		printf("Marte\n");
+		printf("Radius : 3,389.5km\n");
+		printf("Mass : 641,693,000,000,000,000,000,000kg\n");
+		break;
+	case 4:
+		printf("Jupiter\n");
+		printf("Radius : 69,911km\n");
+		printf("Mass : 898,130,000,000,000,000,000,000,000kg\n");
+		break;
+	case 5:
+		printf("Saturno\n");
+		printf("Radius : 58,232km\n");
+		printf("Mass : 568,319,000,000,000,000,000,000,000kg\n");
+		break;
+	case 6:
+		printf("Urano\n");
+		printf("Radius : 25,362km\n");
+		printf("Mass : 86,810,300,000,000,000,000,000,000kg\n");
+		break;
+	case 7:
+		printf("Neptuno\n");
+		printf("Radius : 24,622km\n");
+		printf("Mass : 102,410,000,000,000,000,000,000,000kg\n");
+		break;
+	}
+}
 
+
+void  SceneTexture::keyfunc(GLFWwindow* window, int key, int scancode, int action, int mods) {
+	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
+		if (!isMenu) {
+			paused = !paused;
+		}
+
+	}
+
+	if (key == GLFW_KEY_CAPS_LOCK && action == GLFW_PRESS) {
+		isTroll = !isTroll;
 	}
 
 	if (key == GLFW_KEY_W && action == GLFW_REPEAT) {
 		if (camx > 500) {
 			camx -= 100.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 
 	}
 	if (key == GLFW_KEY_S && action == GLFW_REPEAT) {
 		if (camx < 3300) {
 			camx += 100.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
+
 	if (key == GLFW_KEY_W && action == GLFW_PRESS) {
 		if (camx > 500) {
 			camx -= 50.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 	if (key == GLFW_KEY_S && action == GLFW_PRESS) {
 		if (camx < 3300) {
 			camx += 50.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
-
 
 	if (key == GLFW_KEY_A && action == GLFW_REPEAT) {
 		if (camy < 1800) {
 			camy += 100.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 	if (key == GLFW_KEY_D && action == GLFW_REPEAT) {
 		if (camy > -1800) {
 			camy -= 100.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 
 	if (key == GLFW_KEY_A && action == GLFW_PRESS) {
 		if (camy < 1800) {
 			camy += 50.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 	if (key == GLFW_KEY_D && action == GLFW_PRESS) {
 		if (camy > -1800) {
 			camy -= 50.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
-
 
 	if (key == GLFW_KEY_Q && action == GLFW_REPEAT) {
 		if (camz < 1800) {
 			camz += 100.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 	if (key == GLFW_KEY_E && action == GLFW_REPEAT) {
 		if (camz > -1800) {
 			camz -= 100.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 
 	if (key == GLFW_KEY_Q && action == GLFW_PRESS) {
 		if (camz < 1800) {
 			camz += 50.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
 	if (key == GLFW_KEY_E && action == GLFW_PRESS) {
 		if (camz > -1800) {
 			camz -= 50.0f;
-			printf("X:%.2f Y:%.2f Z%.2f\n", camx, camy, camz);
 		}
 	}
-
 
 	if (key == GLFW_KEY_V && action == GLFW_PRESS) {
-		SceneTexture::is2d = !SceneTexture::is2d;
+		if(!is2d)
+			printf("Entrou no modo 2d\n");
+		else
+			printf("Saiu do modo 2d\n");
+		is2d = !is2d;
 	}
-	if (key == GLFW_KEY_R && action == GLFW_PRESS) {
-		SceneTexture::paused = true;
-		SceneTexture::isMenu = true;
-		SceneTexture::camx = 800.00;
-		SceneTexture::camy = 200.00;
-		SceneTexture::camz = 50.00;
-		SceneTexture::selected = 0;
+
+	if (key == GLFW_KEY_M && action == GLFW_PRESS) {
+		paused = true;
+		isMenu = true;
+		camx = 800.00;
+		camy = 200.00;
+		camz = 50.00;
+		selected = -1;
+		printf("Carregue na seta da direita ou esquerda para mudar de planeta\n\nCarregue no N para sair do modo menu\n");
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < 3; j++) {
-				SceneTexture::planetlocations[i][j] = SceneTexture::planetDefaultlocations[i][j];
+				planetlocations[i][j] = planetDefaultlocations[i][j];
 			}
 		}
+	}
+	if (key == GLFW_KEY_N && action == GLFW_PRESS) {
+		printf("Saiu do modo de menu\n");
+		paused = false;
+		isMenu = false;
+		eyex = 0.f;
+		eyey = 0.f;
+		eyez = 0.f;
+		camx = 2500.0f;
+		camy = 500.0f;
+		camz = 0.0f;
 	}
 
 	if (key == GLFW_KEY_LEFT && action == GLFW_PRESS) {
-		if (SceneTexture::isMenu) {
-			if ((SceneTexture::selected < 7))
-				SceneTexture::selected += 1;
+		if (isMenu) {
+			if ((selected < 7))
+				selected += 1;
 			else
-				SceneTexture::selected = -1;
+				selected = -1;
 			if (selected != -1) {
-				printf("Selected:Planet %d\n", SceneTexture::selected);
-				SceneTexture::eyex = SceneTexture::planetlocations[selected][0];
-				SceneTexture::eyey = SceneTexture::planetlocations[selected][1];
-				SceneTexture::eyez = SceneTexture::planetlocations[selected][2];
-				SceneTexture::camz = SceneTexture::planetlocations[selected][2] + 50.0f;
+				eyex = planetlocations[selected][0];
+				eyey = planetlocations[selected][1];
+				eyez = planetlocations[selected][2];
+				camz = planetlocations[selected][2] + 50.0f;
 			}
 			else {
-				printf("Selected:Sun\n");
-				SceneTexture::eyex = SceneTexture::starLocation[0][0];
-				SceneTexture::eyey = SceneTexture::starLocation[0][1];
-				SceneTexture::eyez = SceneTexture::starLocation[0][2];
-				SceneTexture::camz = SceneTexture::starLocation[0][2] + 50.0f;
+				eyex = starLocation[0][0];
+				eyey = starLocation[0][1];
+				eyez = starLocation[0][2];
+				camz = starLocation[0][2] + 50.0f;
 			}
+			planetInformation(selected);
 		}
 	}
-
 	if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS) {
-		if (SceneTexture::isMenu) {
-			if ((SceneTexture::selected > -1))
-				SceneTexture::selected -= 1;
+		if (isMenu) {
+			if ((selected > -1))
+				selected -= 1;
 			else
-				SceneTexture::selected = 7;
+				selected = 7;
 			if (selected != -1) {
-				printf("Selected:Planet %d\n", SceneTexture::selected);
-				SceneTexture::eyex = SceneTexture::planetlocations[selected][0];
-				SceneTexture::eyey = SceneTexture::planetlocations[selected][1];
-				SceneTexture::eyez = SceneTexture::planetlocations[selected][2];
-				SceneTexture::camz = SceneTexture::planetlocations[selected][2] + 50.0f;
+				eyex = planetlocations[selected][0];
+				eyey = planetlocations[selected][1];
+				eyez = planetlocations[selected][2];
+				camz = planetlocations[selected][2] + 50.0f;
 			}
 			else {
-				printf("Selected:Sun\n");
-				SceneTexture::eyex = SceneTexture::starLocation[0][0];
-				SceneTexture::eyey = SceneTexture::starLocation[0][1];
-				SceneTexture::eyez = SceneTexture::starLocation[0][2];
-				SceneTexture::camz = SceneTexture::starLocation[0][2] + 50.0f;
+				eyex = starLocation[0][0];
+				eyey = starLocation[0][1];
+				eyez = starLocation[0][2];
+				camz = starLocation[0][2] + 50.0f;
 			}
+			planetInformation(selected);
 		}
 	}
-
-	if (key == GLFW_KEY_T && action == GLFW_PRESS) {
-		SceneTexture::paused = false;
-		SceneTexture::isMenu = false;
-		SceneTexture::eyex = 0.f;
-		SceneTexture::eyey = 0.f;
-		SceneTexture::eyez = 0.f;
+	if (key == GLFW_KEY_H && action == GLFW_PRESS) {
+		if (isMenu) {
+			printf("Carregue na seta da direita ou esquerda para mudar de planeta\n\nCarregue no N para sair do modo menu\n");
+			return;
+		}
+		if (is2d) {
+			printf("Carregue no V para sair do modo 2D\n");
+			return;
+		}
+		printf("Carregue no W e S para se mover no eixo dos x\nCarregue no A e D para se mover no eixo dos y\nCarregue no Q e E para se mover no eixo dos z\n");
+		printf("Carregue no V para entrar no modo 2D\nCarregue no M para entrar no modo menu\n");
 	}
 }
