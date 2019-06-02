@@ -1,2 +1,4 @@
-﻿  main.cpp
-  SolarSystem.vcxproj -> C:\Users\batpe\Desktop\4\Cg\Práticas\SistemaSolar\SolarSystem\Debug\SolarSystem.exe
+﻿  scenetexture.cpp
+C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(323,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(323,48): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+  SolarSystem.vcxproj -> C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\Debug\SolarSystem.exe

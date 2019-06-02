@@ -320,11 +320,13 @@ float SceneTexture::starRadius = 10.0f;
 float SceneTexture::starLight[1][9]{ { 1.f, 1.f, 1.f,1.f, 1.f, 1.f,1.f, 1.f, 1.f} };
 GLfloat SceneTexture::rotation = 100.f;
 
-SceneTexture::SceneTexture() {
+SceneTexture::SceneTexture():menu(50.f, 50.0f, 10.0f, 10.0f)
+	{
 	venus = ObjMesh::load("../media/objects/venus.obj", true);
 	saturn = ObjMesh::load("../media/objects/saturn3.obj", true);
 	asteroid = ObjMesh::load("../media/objects/asteroid.obj", true);
 
+	//Planetas
 	texSun = Texture::loadPixels("../media/texturas/2k_sun.jpg", sSun, tSun);
 	texMercury = Texture::loadPixels("../media/texturas/2k_mercury.jpg", sMercury, tMercury);
 	texVenus = Texture::loadPixels("../media/texturas/2k_venus_surface.jpg", sVenus, tVenus);
@@ -339,6 +341,17 @@ SceneTexture::SceneTexture() {
 	texAbel = Texture::loadPixels("../media/texturas/Abel.jpg", sAbel, tAbel);
 	texBlue = Texture::loadPixels("../media/texturas/bluescreen.png", sBlue, tBlue);
 	texAsteroid = Texture::loadPixels("../media/texturas/2k_asteroid.jpg", sAsteroid, tAsteroid);
+
+	//Menu
+	texmSun = Texture::loadPixels("../media/texturas/solMenu.png", smSun, tmSun);
+	texmMercury = Texture::loadPixels("../media/texturas/mercurioMenu.png", smMercury, tmMercury);
+	texmVenus = Texture::loadPixels("../media/texturas/venusMenu.png", smVenus, tmVenus);
+	texmEarth = Texture::loadPixels("../media/texturas/terraMenu.jpg", smEarth, tmEarth);
+	texmMars = Texture::loadPixels("../media/texturas/marteMenu.png", smMars, tmMars);
+	texmJupiter = Texture::loadPixels("../media/texturas/jupiterMenu.png", smJupiter, tmJupiter);
+	texmSaturn = Texture::loadPixels("../media/texturas/saturnoMenu.png", smSaturn, tmSaturn);
+	texmUranus = Texture::loadPixels("../media/texturas/uranoMenu.png", smUranus, tmUranus);
+	texmNeptune = Texture::loadPixels("../media/texturas/neptunoMenu.png", smNeptune, tmNeptune);
 }
 
 void SceneTexture::initScene()
@@ -381,6 +394,12 @@ void SceneTexture::render()
 
 	prog.setUniform("Light.Position", glm::vec4(.0f, .0f, .0f, 1.0f));
 	prog.setUniform("Light.Intensity", glm::vec3(1.f, 1.f, 1.f));
+
+	if (isMenu) {
+		renderMenu(selected);
+		setMatrices();
+		menu.render();
+	}
 
 	calcPlanetLocations();
 	calcMoonLocation();
@@ -465,7 +484,6 @@ void SceneTexture::render()
 		textureLoad(texBlue, sBlue, tBlue);
 	setMatrices();
 	venus->render();
-	
 }
 
 void SceneTexture::renderPlanet(float sLoc[3],float sLi[9], float sR, GLfloat t,GLfloat rotation) {
@@ -586,4 +604,47 @@ void SceneTexture::calcMoonLocation() {
 	float tempAngle = (moonAngle[0] / 180.0f) * 3.14159f;
 	moonlocations[0][0] = moonTransCenter[0][0] + sin(tempAngle) * moonDistance[0];
 	moonlocations[0][2] = moonTransCenter[0][2] + cos(tempAngle) * moonDistance[0];
+}
+
+void SceneTexture::renderMenu(int selected) {
+	if (selected == -1) {
+		model = mat4(1.0f);
+		model = glm::translate(model, glm::vec3(camx - 50.f, camy - 10.f, camz - 50.f));
+		model = glm::rotate(model, glm::radians<float>(90.f), glm::vec3(0.f, 0.f, 1.f));
+		model = glm::rotate(model, glm::radians<float>(90.f), glm::vec3(0.f, 1.f, 0.f));
+		textureLoad(texmSun, smSun, tmSun);
+	}
+	else {
+		model = mat4(1.0f);
+		model = glm::translate(model, glm::vec3(camx - 50.f, camy - 10.f, camz - 50.f));
+		model = glm::rotate(model, glm::radians<float>(90.f), glm::vec3(0.f, 0.f, 1.f));
+		model = glm::rotate(model, glm::radians<float>(90.f), glm::vec3(0.f, 1.f, 0.f));
+		switch (selected){
+		case 0:
+			textureLoad(texmMercury, smMercury, tmMercury);
+			break;
+		case 1:
+			textureLoad(texmVenus, smVenus, tmVenus);
+			break;
+		case 2:
+			textureLoad(texmEarth, smEarth, tmEarth);
+			break;
+		case 3:
+			textureLoad(texmMars, smMars, tmMars);
+			break;
+		case 4:
+			textureLoad(texmJupiter, smJupiter, tmJupiter);
+			break;
+		case 5:
+			textureLoad(texmSaturn, smSaturn, tmSaturn);
+			break;
+		case 6:
+			textureLoad(texmUranus, smUranus, tmUranus);
+			break;
+		case 7:
+			textureLoad(texmNeptune, smNeptune, tmNeptune);
+			break;
+		}
+	}
+	
 }

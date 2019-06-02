@@ -27,6 +27,7 @@
     <ClInclude Include="glslprogram.h" />
     <ClInclude Include="glutils.h" />
     <ClInclude Include="objmesh.h" />
+    <ClInclude Include="plane.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="scenerunner.h" />
     <ClInclude Include="scenetexture.h" />
@@ -41,6 +42,7 @@
     <ClCompile Include="glutils.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objmesh.cpp" />
+    <ClCompile Include="plane.cpp" />
     <ClCompile Include="scenetexture.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="trianglemesh.cpp" />

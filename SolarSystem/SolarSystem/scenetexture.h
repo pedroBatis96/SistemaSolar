@@ -3,6 +3,7 @@
 
 #include "scene.h"
 #include "glslprogram.h"
+#include "plane.h"
 
 #include <glm.hpp>
 #include "objmesh.h"
@@ -11,24 +12,17 @@
 class SceneTexture : public Scene
 {
 private:
+	Plane menu;
+
 	GLSLProgram prog;
 
 	std::unique_ptr<ObjMesh> sphere,sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune,moon,asteroid;
 	GLubyte* texSun, * texMercury, * texVenus, * texEarth, * texMars, * texJupiter, * texSaturn, * texUranus, * texNeptune,* texMoon,* texSkyBox, * texAbel, * texBlue, *texAsteroid;
-	GLint sSun, tSun,
-		sMercury, tMercury,
-		sVenus, tVenus,
-		sEarth, tEarth,
-		sMars, tMars,
-		sJupiter, tJupiter,
-		sSaturn, tSaturn,
-		sUranus, tUranus,
-		sNeptune, tNeptune,
-		sMoon, tMoon,
-		sSkyBox,tSkyBox,
-		sAbel, tAbel,
-		sBlue, tBlue,
-		sAsteroid, tAsteroid;
+	GLubyte* texmSun, * texmMercury, * texmVenus, * texmEarth, * texmMars, * texmJupiter, * texmSaturn, * texmUranus, * texmNeptune;
+	GLint sSun, tSun,sMercury, tMercury,sVenus, tVenus,sEarth, tEarth,sMars, tMars,sJupiter, tJupiter,sSaturn, tSaturn,sUranus, tUranus,sNeptune, tNeptune,sMoon, tMoon,
+		sSkyBox,tSkyBox,sAbel, tAbel,sBlue, tBlue,sAsteroid, tAsteroid;
+	GLint smSun, tmSun, smMercury, tmMercury, smVenus, tmVenus, smEarth, tmEarth, smMars, tmMars, smJupiter, tmJupiter, smSaturn, tmSaturn, smUranus, tmUranus, smNeptune, tmNeptune;
+		
 
 
 	float angle;
@@ -102,6 +96,7 @@ public:
 	void render();
 	void resize(int, int);
 	void renderBK(float);
+	void renderMenu(int);
 	void renderPlanet(float[3], float[9], float, GLfloat, GLfloat);
 };
 
