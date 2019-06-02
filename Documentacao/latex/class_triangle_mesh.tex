@@ -1,0 +1,108 @@
+\hypertarget{class_triangle_mesh}{}\section{Triangle\+Mesh Class Reference}
+\label{class_triangle_mesh}\index{TriangleMesh@{TriangleMesh}}
+
+
+{\ttfamily \#include $<$trianglemesh.\+h$>$}
+
+Inheritance diagram for Triangle\+Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_triangle_mesh}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_triangle_mesh_ad2e6daebfd73b0f3cf832b13a2bf300d}{$\sim$\+Triangle\+Mesh}} ()
+\item 
+virtual void \mbox{\hyperlink{class_triangle_mesh_acd43f84016ec88e288df4c0f6739fc70}{render}} () const
+\item 
+G\+Luint \mbox{\hyperlink{class_triangle_mesh_a6f1bd6279aa61bd2cf0b8a72c8d3035f}{get\+Vao}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_triangle_mesh_a4b115a2f023767efab11cfb44d8eb4c4}{init\+Buffers}} (std\+::vector$<$ G\+Luint $>$ $\ast$indices, std\+::vector$<$ G\+Lfloat $>$ $\ast$points, std\+::vector$<$ G\+Lfloat $>$ $\ast$normals, std\+::vector$<$ G\+Lfloat $>$ $\ast$tex\+Coords=nullptr, std\+::vector$<$ G\+Lfloat $>$ $\ast$tangents=nullptr)
+\item 
+virtual void \mbox{\hyperlink{class_triangle_mesh_ac92596aaae30b94eb274fd3e267c7387}{delete\+Buffers}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{class_triangle_mesh_a5775b5f33a2dc1b758b7e5c9be50a2ab}{n\+Verts}}
+\item 
+G\+Luint \mbox{\hyperlink{class_triangle_mesh_a51f91c0f3126061cd7f1fa71a1cc09b1}{vao}}
+\item 
+std\+::vector$<$ G\+Luint $>$ \mbox{\hyperlink{class_triangle_mesh_a6b4667d53b613e80bd39bb007c5988b6}{buffers}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_mesh_ad2e6daebfd73b0f3cf832b13a2bf300d}\label{class_triangle_mesh_ad2e6daebfd73b0f3cf832b13a2bf300d}} 
+\index{TriangleMesh@{TriangleMesh}!````~TriangleMesh@{$\sim$TriangleMesh}}
+\index{````~TriangleMesh@{$\sim$TriangleMesh}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{$\sim$TriangleMesh()}{~TriangleMesh()}}
+{\footnotesize\ttfamily Triangle\+Mesh\+::$\sim$\+Triangle\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_mesh_ac92596aaae30b94eb274fd3e267c7387}\label{class_triangle_mesh_ac92596aaae30b94eb274fd3e267c7387}} 
+\index{TriangleMesh@{TriangleMesh}!deleteBuffers@{deleteBuffers}}
+\index{deleteBuffers@{deleteBuffers}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{deleteBuffers()}{deleteBuffers()}}
+{\footnotesize\ttfamily void Triangle\+Mesh\+::delete\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_triangle_mesh_a6f1bd6279aa61bd2cf0b8a72c8d3035f}\label{class_triangle_mesh_a6f1bd6279aa61bd2cf0b8a72c8d3035f}} 
+\index{TriangleMesh@{TriangleMesh}!getVao@{getVao}}
+\index{getVao@{getVao}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{getVao()}{getVao()}}
+{\footnotesize\ttfamily G\+Luint Triangle\+Mesh\+::get\+Vao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_triangle_mesh_a4b115a2f023767efab11cfb44d8eb4c4}\label{class_triangle_mesh_a4b115a2f023767efab11cfb44d8eb4c4}} 
+\index{TriangleMesh@{TriangleMesh}!initBuffers@{initBuffers}}
+\index{initBuffers@{initBuffers}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{initBuffers()}{initBuffers()}}
+{\footnotesize\ttfamily void Triangle\+Mesh\+::init\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ G\+Luint $>$ $\ast$}]{indices,  }\item[{std\+::vector$<$ G\+Lfloat $>$ $\ast$}]{points,  }\item[{std\+::vector$<$ G\+Lfloat $>$ $\ast$}]{normals,  }\item[{std\+::vector$<$ G\+Lfloat $>$ $\ast$}]{tex\+Coords = {\ttfamily nullptr},  }\item[{std\+::vector$<$ G\+Lfloat $>$ $\ast$}]{tangents = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_triangle_mesh_acd43f84016ec88e288df4c0f6739fc70}\label{class_triangle_mesh_acd43f84016ec88e288df4c0f6739fc70}} 
+\index{TriangleMesh@{TriangleMesh}!render@{render}}
+\index{render@{render}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Triangle\+Mesh\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_drawable_a773dfc1e1dc02e4156204af3939d04d1}{Drawable}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_obj_mesh_a735d4c7978094b8ba07cd720e496ea60}{Obj\+Mesh}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_triangle_mesh_a6b4667d53b613e80bd39bb007c5988b6}\label{class_triangle_mesh_a6b4667d53b613e80bd39bb007c5988b6}} 
+\index{TriangleMesh@{TriangleMesh}!buffers@{buffers}}
+\index{buffers@{buffers}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{buffers}{buffers}}
+{\footnotesize\ttfamily std\+::vector$<$G\+Luint$>$ Triangle\+Mesh\+::buffers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_triangle_mesh_a5775b5f33a2dc1b758b7e5c9be50a2ab}\label{class_triangle_mesh_a5775b5f33a2dc1b758b7e5c9be50a2ab}} 
+\index{TriangleMesh@{TriangleMesh}!nVerts@{nVerts}}
+\index{nVerts@{nVerts}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{nVerts}{nVerts}}
+{\footnotesize\ttfamily G\+Luint Triangle\+Mesh\+::n\+Verts\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_triangle_mesh_a51f91c0f3126061cd7f1fa71a1cc09b1}\label{class_triangle_mesh_a51f91c0f3126061cd7f1fa71a1cc09b1}} 
+\index{TriangleMesh@{TriangleMesh}!vao@{vao}}
+\index{vao@{vao}!TriangleMesh@{TriangleMesh}}
+\subsubsection{\texorpdfstring{vao}{vao}}
+{\footnotesize\ttfamily G\+Luint Triangle\+Mesh\+::vao\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{trianglemesh_8h}{trianglemesh.\+h}}\item 
+\mbox{\hyperlink{trianglemesh_8cpp}{trianglemesh.\+cpp}}\end{DoxyCompactItemize}

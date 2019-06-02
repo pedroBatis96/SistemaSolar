@@ -1,0 +1,112 @@
+\hypertarget{class_obj_mesh_1_1_obj_mesh_data}{}\section{Obj\+Mesh\+::Obj\+Mesh\+Data Class Reference}
+\label{class_obj_mesh_1_1_obj_mesh_data}\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+
+
+{\ttfamily \#include $<$objmesh.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_1_1_obj_vertex}{Obj\+Vertex}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_a60cd7ccf455f36bc44e50be50f036fe7}{Obj\+Mesh\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_a0a43c495dbb859e42a5d9331835f0e23}{generate\+Normals\+If\+Needed}} ()
+\item 
+void \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_ae264e93b60d2d0b898754b026de38d94}{generate\+Tangents}} ()
+\item 
+void \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_aafd7954d3e645958b1a533f1e875c2f6}{load}} (const char $\ast$file\+Name, \mbox{\hyperlink{class_aabb}{Aabb}} \&\mbox{\hyperlink{class_obj_mesh_a21ce3155628d670cec7b107959a6788b}{bbox}})
+\item 
+void \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_ab6688d87c9cee459d1b1c0813fa360ef}{to\+Gl\+Mesh}} (\mbox{\hyperlink{class_obj_mesh_1_1_gl_mesh_data}{Gl\+Mesh\+Data}} \&data)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ glm\+::vec3 $>$ \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_a4c1f99780ac40b800bb9a5d7c7ca9a23}{points}}
+\item 
+std\+::vector$<$ glm\+::vec3 $>$ \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_a284ccc661b640d645b7eb26c2499253c}{normals}}
+\item 
+std\+::vector$<$ glm\+::vec2 $>$ \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_a0784aa856fa9f3b40aca429ca3f76efc}{tex\+Coords}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_1_1_obj_vertex}{Obj\+Vertex}} $>$ \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_ad1d61b4a4dbaccf79bb63292438187fe}{faces}}
+\item 
+std\+::vector$<$ glm\+::vec4 $>$ \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_a171c230b9c3b0317aa9c3c69a3335d20}{tangents}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_a60cd7ccf455f36bc44e50be50f036fe7}\label{class_obj_mesh_1_1_obj_mesh_data_a60cd7ccf455f36bc44e50be50f036fe7}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!ObjMeshData@{ObjMeshData}}
+\index{ObjMeshData@{ObjMeshData}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{ObjMeshData()}{ObjMeshData()}}
+{\footnotesize\ttfamily Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::\+Obj\+Mesh\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_a0a43c495dbb859e42a5d9331835f0e23}\label{class_obj_mesh_1_1_obj_mesh_data_a0a43c495dbb859e42a5d9331835f0e23}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!generateNormalsIfNeeded@{generateNormalsIfNeeded}}
+\index{generateNormalsIfNeeded@{generateNormalsIfNeeded}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{generateNormalsIfNeeded()}{generateNormalsIfNeeded()}}
+{\footnotesize\ttfamily void Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::generate\+Normals\+If\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_ae264e93b60d2d0b898754b026de38d94}\label{class_obj_mesh_1_1_obj_mesh_data_ae264e93b60d2d0b898754b026de38d94}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!generateTangents@{generateTangents}}
+\index{generateTangents@{generateTangents}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{generateTangents()}{generateTangents()}}
+{\footnotesize\ttfamily void Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::generate\+Tangents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_aafd7954d3e645958b1a533f1e875c2f6}\label{class_obj_mesh_1_1_obj_mesh_data_aafd7954d3e645958b1a533f1e875c2f6}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!load@{load}}
+\index{load@{load}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{\mbox{\hyperlink{class_aabb}{Aabb}} \&}]{bbox }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_ab6688d87c9cee459d1b1c0813fa360ef}\label{class_obj_mesh_1_1_obj_mesh_data_ab6688d87c9cee459d1b1c0813fa360ef}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!toGlMesh@{toGlMesh}}
+\index{toGlMesh@{toGlMesh}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{toGlMesh()}{toGlMesh()}}
+{\footnotesize\ttfamily void Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::to\+Gl\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_obj_mesh_1_1_gl_mesh_data}{Gl\+Mesh\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_ad1d61b4a4dbaccf79bb63292438187fe}\label{class_obj_mesh_1_1_obj_mesh_data_ad1d61b4a4dbaccf79bb63292438187fe}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!faces@{faces}}
+\index{faces@{faces}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{faces}{faces}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data_1_1_obj_vertex}{Obj\+Vertex}}$>$ Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::faces}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_a284ccc661b640d645b7eb26c2499253c}\label{class_obj_mesh_1_1_obj_mesh_data_a284ccc661b640d645b7eb26c2499253c}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!normals@{normals}}
+\index{normals@{normals}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{normals}{normals}}
+{\footnotesize\ttfamily std\+::vector$<$glm\+::vec3$>$ Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::normals}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_a4c1f99780ac40b800bb9a5d7c7ca9a23}\label{class_obj_mesh_1_1_obj_mesh_data_a4c1f99780ac40b800bb9a5d7c7ca9a23}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!points@{points}}
+\index{points@{points}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily std\+::vector$<$glm\+::vec3$>$ Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::points}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_a171c230b9c3b0317aa9c3c69a3335d20}\label{class_obj_mesh_1_1_obj_mesh_data_a171c230b9c3b0317aa9c3c69a3335d20}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!tangents@{tangents}}
+\index{tangents@{tangents}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{tangents}{tangents}}
+{\footnotesize\ttfamily std\+::vector$<$glm\+::vec4$>$ Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::tangents}
+
+\mbox{\Hypertarget{class_obj_mesh_1_1_obj_mesh_data_a0784aa856fa9f3b40aca429ca3f76efc}\label{class_obj_mesh_1_1_obj_mesh_data_a0784aa856fa9f3b40aca429ca3f76efc}} 
+\index{ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}!texCoords@{texCoords}}
+\index{texCoords@{texCoords}!ObjMesh::ObjMeshData@{ObjMesh::ObjMeshData}}
+\subsubsection{\texorpdfstring{texCoords}{texCoords}}
+{\footnotesize\ttfamily std\+::vector$<$glm\+::vec2$>$ Obj\+Mesh\+::\+Obj\+Mesh\+Data\+::tex\+Coords}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{objmesh_8h}{objmesh.\+h}}\item 
+\mbox{\hyperlink{objmesh_8cpp}{objmesh.\+cpp}}\end{DoxyCompactItemize}

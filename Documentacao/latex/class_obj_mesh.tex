@@ -1,0 +1,101 @@
+\hypertarget{class_obj_mesh}{}\section{Obj\+Mesh Class Reference}
+\label{class_obj_mesh}\index{ObjMesh@{ObjMesh}}
+
+
+{\ttfamily \#include $<$objmesh.\+h$>$}
+
+Inheritance diagram for Obj\+Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_obj_mesh}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_obj_mesh_1_1_gl_mesh_data}{Gl\+Mesh\+Data}}
+\item 
+class \mbox{\hyperlink{class_obj_mesh_1_1_obj_mesh_data}{Obj\+Mesh\+Data}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_obj_mesh_a735d4c7978094b8ba07cd720e496ea60}{render}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ \mbox{\hyperlink{class_obj_mesh_a783fd2e6bd401c6ec340946b0ca0ecb2}{load}} (const char $\ast$file\+Name, bool center=false, bool gen\+Tangents=false)
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ \mbox{\hyperlink{class_obj_mesh_adc7c1c7e377349666929592343fb627c}{load\+With\+Adjacency}} (const char $\ast$file\+Name, bool center=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obj_mesh_a472971647253a42f8bd585b58da6d086}{Obj\+Mesh}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aabb}{Aabb}} \mbox{\hyperlink{class_obj_mesh_a21ce3155628d670cec7b107959a6788b}{bbox}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_obj_mesh_a1999f87fdd38bb55dd70794bf1352e1a}{draw\+Adj}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_obj_mesh_a472971647253a42f8bd585b58da6d086}\label{class_obj_mesh_a472971647253a42f8bd585b58da6d086}} 
+\index{ObjMesh@{ObjMesh}!ObjMesh@{ObjMesh}}
+\index{ObjMesh@{ObjMesh}!ObjMesh@{ObjMesh}}
+\subsubsection{\texorpdfstring{ObjMesh()}{ObjMesh()}}
+{\footnotesize\ttfamily Obj\+Mesh\+::\+Obj\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_obj_mesh_a783fd2e6bd401c6ec340946b0ca0ecb2}\label{class_obj_mesh_a783fd2e6bd401c6ec340946b0ca0ecb2}} 
+\index{ObjMesh@{ObjMesh}!load@{load}}
+\index{load@{load}!ObjMesh@{ObjMesh}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ Obj\+Mesh\+::load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{bool}]{center = {\ttfamily false},  }\item[{bool}]{gen\+Tangents = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_obj_mesh_adc7c1c7e377349666929592343fb627c}\label{class_obj_mesh_adc7c1c7e377349666929592343fb627c}} 
+\index{ObjMesh@{ObjMesh}!loadWithAdjacency@{loadWithAdjacency}}
+\index{loadWithAdjacency@{loadWithAdjacency}!ObjMesh@{ObjMesh}}
+\subsubsection{\texorpdfstring{loadWithAdjacency()}{loadWithAdjacency()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ Obj\+Mesh\+::load\+With\+Adjacency (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{bool}]{center = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_obj_mesh_a735d4c7978094b8ba07cd720e496ea60}\label{class_obj_mesh_a735d4c7978094b8ba07cd720e496ea60}} 
+\index{ObjMesh@{ObjMesh}!render@{render}}
+\index{render@{render}!ObjMesh@{ObjMesh}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Obj\+Mesh\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_triangle_mesh_acd43f84016ec88e288df4c0f6739fc70}{Triangle\+Mesh}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_obj_mesh_a21ce3155628d670cec7b107959a6788b}\label{class_obj_mesh_a21ce3155628d670cec7b107959a6788b}} 
+\index{ObjMesh@{ObjMesh}!bbox@{bbox}}
+\index{bbox@{bbox}!ObjMesh@{ObjMesh}}
+\subsubsection{\texorpdfstring{bbox}{bbox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aabb}{Aabb}} Obj\+Mesh\+::bbox\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_obj_mesh_a1999f87fdd38bb55dd70794bf1352e1a}\label{class_obj_mesh_a1999f87fdd38bb55dd70794bf1352e1a}} 
+\index{ObjMesh@{ObjMesh}!drawAdj@{drawAdj}}
+\index{drawAdj@{drawAdj}!ObjMesh@{ObjMesh}}
+\subsubsection{\texorpdfstring{drawAdj}{drawAdj}}
+{\footnotesize\ttfamily bool Obj\+Mesh\+::draw\+Adj\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{objmesh_8h}{objmesh.\+h}}\item 
+\mbox{\hyperlink{objmesh_8cpp}{objmesh.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,1439 @@
+\hypertarget{class_scene_texture}{}\section{Scene\+Texture Class Reference}
+\label{class_scene_texture}\index{SceneTexture@{SceneTexture}}
+
+
+Classe responsavel por tudo existente no Sistema Solar.  
+
+
+
+
+{\ttfamily \#include $<$scenetexture.\+h$>$}
+
+Inheritance diagram for Scene\+Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_texture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_texture_ae484bb2160a86922204010cfda100e85}{Scene\+Texture}} ()
+\item 
+void \mbox{\hyperlink{class_scene_texture_a22fb3251dd146c10643ca0af54b10bd5}{init\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Inicializacao da cena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_a345ac4834ce9785ed91e24d25046a835}{update}} (float t)
+\begin{DoxyCompactList}\small\item\em Atualizacao da cena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_ab988e3452c65e9b999a80764905159c4}{render}} ()
+\begin{DoxyCompactList}\small\item\em Main loop da renderizacao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_a25d792c7e4f5eba8f9c04b28077c6804}{resize}} (int, int)
+\begin{DoxyCompactList}\small\item\em Alteracao do tamanho do viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_a45e23149cc3ff37694ee17daffa29a01}{render\+BK}} (float)
+\begin{DoxyCompactList}\small\item\em Renderizacao do background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_a195528c59a0cb7b6c1eeed33ca689208}{render\+Menu}} (int)
+\begin{DoxyCompactList}\small\item\em Renderizacao do menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_a3fdce2ddec5b4d71e25d99a487e81450}{render\+Planet}} (float\mbox{[}3\mbox{]}, float\mbox{[}9\mbox{]}, float, G\+Lfloat, G\+Lfloat)
+\begin{DoxyCompactList}\small\item\em Renderizacao do planeta, onde e efetuada a translacao, rotacao e escalagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_scene_texture_a24b162999ad97cbaec810c4257405e97}{keyfunc}} (G\+L\+F\+Wwindow $\ast$, int, int, int, int)
+\begin{DoxyCompactList}\small\item\em Funcionalidades das teclas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{class_scene_texture_a124827d3cc1d79b98ee664b8126b2794}{textL}}
+\begin{DoxyCompactList}\small\item\em Variavel onde as texturas sao geradas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{planetlocations}} \mbox{[}8\mbox{]}\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao do planeta. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_acd7eab546d7fb95612c4708122a4871c}{planet\+Defaultlocations}} \mbox{[}8\mbox{]}\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao default do planeta. \end{DoxyCompactList}\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_af88e169aa03c2541615de23ece5c6d80}{planet\+Rotation}} \mbox{[}8\mbox{]} = \{ 10.f,20.f,30.f,40.f,50.f,60.f,70.f,80.f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a velocidade de rotacao do planeta. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ac6f6512cb8d1c29b8d441554086506e0}{planet\+Light}} \mbox{[}8\mbox{]}\mbox{[}9\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar os atributos de reflexao do planeta. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a8a848a35ca146f5d75c66caf13a120ef}{planet\+Radius}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar quanto o planeta vai escalar. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a7d69f31178c4fa3ecc26a36201a1d2f9}{planet\+Speed}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a velocidade de translacao do planeta. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ae804a3bbd5b89796760b7d6723b42558}{planet\+Angle}} \mbox{[}8\mbox{]} = \{ 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o angulo de translacao onde o planeta se encontra. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a21b953bda09366aa9c43d2da0f4e55fc}{planet\+Distance}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a distancia ao sol ao qual o planeta se encontra. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a626f618c6ec872833e7ed8d7ba3b8dc2}{asteroid\+Locations}} \mbox{[}32\mbox{]}\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao dos asteroides. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a7f1a27f3c44ee4c17d0394f37255cd46}{asteroid\+Default\+Locations}} \mbox{[}32\mbox{]}\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao default dos asteroides. \end{DoxyCompactList}\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_acd91229942db42f5d356451edc2bd2da}{asteroid\+Rotation}} \mbox{[}32\mbox{]} = \{ 10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a velocidade de rotacao dos planetas. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ab4d8e8de2b4a9a8ee02af998cfe76a32}{asteroid\+Light}} \mbox{[}32\mbox{]}\mbox{[}9\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a reflexao dos asteroides. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ae5c021e52e6e1ae0ba014198fc698513}{asteroid\+Radius}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o quanto os asteroides vao escalar. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a559dd4e0ca7372066b1722e4628b0ba9}{asteroid\+Speed}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a velocidade de translacao do planeta. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ab58cb404a41dfafb30669b9e8370aa3c}{asteroid\+Angle}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o angulo a que o asteroide se encontra. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ae26e5fac3105908842e7bd0fa351115f}{asteroid\+Distance}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a distancia dos asteroides ao sol. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}} \mbox{[}1\mbox{]}\mbox{[}3\mbox{]} = \{ \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{Scene\+Texture\+::planetlocations}}\mbox{[}2\mbox{]}\mbox{[}0\mbox{]}, \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{Scene\+Texture\+::planetlocations}}\mbox{[}2\mbox{]}\mbox{[}1\mbox{]}, \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{Scene\+Texture\+::planetlocations}}\mbox{[}2\mbox{]}\mbox{[}2\mbox{]} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel para saber o centro de gravidade da lua. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a1b2d81b63010dd6d8ec1022e097eb7c3}{moonlocations}} \mbox{[}1\mbox{]}\mbox{[}3\mbox{]} = \{ \{ \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}1\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}2\mbox{]} + 50.\+0f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao das luas. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ae53e83f7c540d834710356dc43b991f3}{moon\+Default\+Location}} \mbox{[}1\mbox{]}\mbox{[}3\mbox{]} = \{ \{ \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}1\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}2\mbox{]} + 50.\+0f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao default das luas. \end{DoxyCompactList}\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_a867c1b5be3195fe900a403722b170036}{moon\+Rotation}} = 10.f
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a velocidade de rotacao da lua. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ac301828f6b86e80a798ae0531c349c63}{moon\+Radius}} \mbox{[}1\mbox{]} = \{ 0.\+1f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o raio da lua. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a679a4ff577f9a7a82018aff021a94c13}{moon\+Angle}} \mbox{[}1\mbox{]} = \{ 0.\+0f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o angulo de translacao da lua. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ab73f47bec9999c6183e98279b5d29be6}{moon\+Light}} \mbox{[}1\mbox{]}\mbox{[}9\mbox{]} \{ \{0.\+9f, 0.\+9f, 0.\+9f,0.\+95f, 0.\+95f, 0.\+95f,0.\+1f, 0.\+1f, 0.\+1f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a reflexao da lua. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_abb843fec1a05d24bb5ae6a9795cab5c7}{moon\+Distance}} \mbox{[}1\mbox{]} = \{ 50.\+0f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a distancia ao centro de translacao. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_ae86479797b3e8f1afb9dc59c83534686}{moon\+Speed}} \mbox{[}1\mbox{]} = \{ 100.\+0f \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a velocidade da lua. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a504efd019f30eae4e8dcbda77d48ffbb}{bk\+Location}} \mbox{[}1\mbox{]}\mbox{[}3\mbox{]} \{ \{0.\+0f, 0.\+0f , 0.\+0f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao do centro do background. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a7dd286541ee06b8cd2ac2f0a158b4502}{bk\+Radius}} = 150.\+0f
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o raio do background. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a26f87539887244bc249e9ad4e33edb6f}{bk\+Light}} \mbox{[}1\mbox{]}\mbox{[}9\mbox{]} \{ \{ 1.\+0f, 1.\+0f, 1.\+0f,1.\+0f, 1.\+0f, 1.\+0f,1.\+0f, 1.\+0f, 1.\+0f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a luz reflexao do material. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a1987402ddcabace429e49b7f00823b3b}{star\+Location}} \mbox{[}1\mbox{]}\mbox{[}3\mbox{]} \{ \{0.\+0f, 0.\+0f , 0.\+0f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a localizacao do centro do Sol. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a79a357a19513f3fe334e44e415aa1725}{star\+Radius}} = 10.\+0f
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar o raio do Sol. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_scene_texture_a07e5ffc66ac2eeeac00400230340a036}{star\+Light}} \mbox{[}1\mbox{]}\mbox{[}9\mbox{]} \{ \{ 1.f, 1.f, 1.f,1.f, 1.f, 1.f,1.f, 1.f, 1.f\} \}
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a reflexao do Sol. \end{DoxyCompactList}\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_aa57a081d184e1d120e1252bf9b282dec}{rotation}} = 100.f
+\begin{DoxyCompactList}\small\item\em Variavel responsavel por guardar a rotacao do Sol. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_scene_texture_a7a09bbdb36a7e736717f99c30aa76220}{paused}} = false
+\item 
+static bool \mbox{\hyperlink{class_scene_texture_a7c2bfeb08bcea36358e40486f4f0b845}{is2d}} = false
+\item 
+static bool \mbox{\hyperlink{class_scene_texture_a9effaaef46b836601ba47ffc7b680a0a}{retry}} = false
+\item 
+static bool \mbox{\hyperlink{class_scene_texture_a659107efe5e192a00336cfdf2240295b}{is\+Menu}} = false
+\item 
+static bool \mbox{\hyperlink{class_scene_texture_a2b54560296f6bb1cd10a7f62a891641e}{is\+Troll}} = false
+\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_ad9c868c99bb6582e0b6c17a6ce7b5c63}{camx}} = 2500.\+0f
+\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_a0da47773808d3245e64e9763ff8cb24d}{camy}} = 500.\+0f
+\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_aa9a762db75cdf22ffb88ac901557e5b8}{camz}} = 0.\+0f
+\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_a802ce92008205ae668aafd73082f8a24}{eyex}} = 0.\+0f
+\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_a2a402f0b2d0eeeea92889a61e2ec372c}{eyey}} = 0.\+0f
+\item 
+static G\+Lfloat \mbox{\hyperlink{class_scene_texture_a886adca6acb15f43797ca32b3a6e3330}{eyez}} = 0.\+0f
+\item 
+static int \mbox{\hyperlink{class_scene_texture_af6062bdf26eb7625f38d8e2d1508fb60}{selected}} = 0
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_texture_afbdc7b7c4eaa91deadd5f907ca501f7b}{set\+Matrices}} ()
+\begin{DoxyCompactList}\small\item\em Função responsável pelo set das Matrizes, após alterações ao model ou texturas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_ab6fca6f40d60e7e5fd673cd3bbc2bd7b}{compile\+And\+Link\+Shader}} ()
+\begin{DoxyCompactList}\small\item\em Função responsável pela compilação de shaders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_ab923e8fdecd6aa437dfe19c89f604e6b}{texture\+Load}} (G\+Lubyte $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em Função responsável pelo load das texturas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_adcb3a2fbf04c722a62e52f82f3ff81c8}{calc\+Planet\+Locations}} ()
+\begin{DoxyCompactList}\small\item\em Função responsável pelo calculo da posição dos planetas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_texture_a0f8c125b6518c0903c2e47ac7d5b926a}{calc\+Moon\+Location}} ()
+\begin{DoxyCompactList}\small\item\em Função responsável pelo cálculo da posição da Lua. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plane}{Plane}} \mbox{\hyperlink{class_scene_texture_acd845ab828b015b22f1b92a111130076}{menu}}
+\begin{DoxyCompactList}\small\item\em Plano responsavel pela exibicao do menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_l_s_l_program}{G\+L\+S\+L\+Program}} \mbox{\hyperlink{class_scene_texture_abe4ceb019975a851e93b9fe39bc12850}{prog}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ \mbox{\hyperlink{class_scene_texture_a828f9a79b2003b21d0ce58f4960a608d}{venus}}
+\begin{DoxyCompactList}\small\item\em Objeto responsavel por maior parte dos planetas. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ \mbox{\hyperlink{class_scene_texture_a33b834bc0cc2b8eaf72e4abfe05220dc}{saturn}}
+\begin{DoxyCompactList}\small\item\em Objeto responsavel Saturno. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}} $>$ \mbox{\hyperlink{class_scene_texture_a1bc3b7ec6a567f84de74089223004fb7}{asteroid}}
+\begin{DoxyCompactList}\small\item\em Objeto responsavel pelos asteróides. \end{DoxyCompactList}\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_aaa5fdc31a3a25575c7b547f719c46f1c}{tex\+Sun}}
+\begin{DoxyCompactList}\small\item\em Exemplar da variável que guarda uma textura. \end{DoxyCompactList}\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_aaee7f2e920954368fbd97f448ff4228f}{tex\+Mercury}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_af9d9bcbed0f4765c35f1a4a785b7fedc}{tex\+Venus}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a4a2b33714928e8949304af86101e964c}{tex\+Earth}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a1e09227ae29f43abfa473e75c764a26a}{tex\+Mars}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_aa585db7cc129b02d4c096e67ade0320e}{tex\+Jupiter}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a814392ccebc283a0807df7fcb59dadcc}{tex\+Saturn}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a319a5cbc76e3a921e55a49c72a68c941}{tex\+Uranus}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a9f7407018a84259637bb9e1abf274dc1}{tex\+Neptune}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a1f30e2089ab6a1dac646a764eda60f3b}{tex\+Moon}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a1b0ce6fc3c9a06095545fa6395723420}{tex\+Sky\+Box}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_af512e39ce145913d8359e93f87076a66}{tex\+Abel}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a1f21ab3a004beb128c15821bbab8ec9f}{tex\+Blue}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a7067860db942c2e301896351dc0f5eb7}{tex\+Asteroid}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_acdac18fbb4997d82fef0a8275ad2ad31}{texm\+Sun}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a6ce6fd7393996a7236c17192e8977e1e}{texm\+Mercury}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a4de3ac9ecbf0e55dcde936f701854261}{texm\+Venus}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_aade0221c14da45fc9b9a80869c7485f8}{texm\+Earth}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a9ef242ab0416242acf6e1603c9cbd7d9}{texm\+Mars}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_af94aecbb8ff37792f98dff183a40f2f6}{texm\+Jupiter}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a709891945f1538bbc8c44af2b6764c12}{texm\+Saturn}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_af7181f52f463ff4f930aeeb0822249cf}{texm\+Uranus}}
+\item 
+G\+Lubyte $\ast$ \mbox{\hyperlink{class_scene_texture_a9fa1bf870d39f1982f5492540eb7b284}{texm\+Neptune}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a25f15686621dc6caa3ab018fb56d6674}{s\+Sun}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ae27c6af9e09b61b8b82e42e44dc23995}{t\+Sun}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ac4f9cb6f993bcaa2425b98116bc19c9a}{s\+Mercury}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a61bc0a019debb88459abbfeb0596c5b5}{t\+Mercury}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ada8a14d5318c37b2a153e5d0b7308661}{s\+Venus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ac7404076871e4eccddae3486c0b127e4}{t\+Venus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ae1772ad81c05c1861e93432f76a93e0f}{s\+Earth}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a8f2837ea24c08d4fbc89361ab5862ffb}{t\+Earth}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ae7e2fc818536ae88c04d2e1f13ef3006}{s\+Mars}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a9335b0e58e70b58638123b4bda2e814f}{t\+Mars}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ab604fd9bff0f6d57dc5ee3e0ded071d5}{s\+Jupiter}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_acda99f9f004061dd21d53ff9418a0326}{t\+Jupiter}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ae6bfffe6f3b9b2ae15ef0a8918899a7d}{s\+Saturn}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ac05fe1bcd058d9c77766da3bc08c1b45}{t\+Saturn}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ab9a4fa22043bde7393f263ef3d220981}{s\+Uranus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ae85f2fd16e84021ab9d020298af5dc30}{t\+Uranus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a4a088e73b707aa9ecdca2fa70e4385b8}{s\+Neptune}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a20d37067a7c9a7e1e45bdaf0e5ca0982}{t\+Neptune}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a82b3430171fdc1375262af0f0b769bba}{s\+Moon}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a41ed87daa8bae41cecc772c5a2c6ae2f}{t\+Moon}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ac9d4ef546f2f2665fdee5378001aaff9}{s\+Sky\+Box}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a47750da1d59ba9a37c34baaf6bff49f8}{t\+Sky\+Box}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a4f32faf70f1f9444bbefcaa325542587}{s\+Abel}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a2d2763c06ef9204a162e1236c4c6dd1d}{t\+Abel}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ad8303eea711415ff5d20c8ccfc860396}{s\+Blue}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ab5afac145c6a36d096ba5f20b3991b63}{t\+Blue}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a57e3ba4f93f35e59ee6d506100980ae2}{s\+Asteroid}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a222c9395222ee7a5a969bdbb1c0adb89}{t\+Asteroid}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_afc1e08159c5b7a3c947e8ba09d093ec3}{sm\+Sun}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ac0e4b7e6db4750a23acbfd3f4312dd36}{tm\+Sun}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ab54a99ec56fef2cac52ca7c699d12f44}{sm\+Mercury}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a032c62d4416f9b8b77567aa287069280}{tm\+Mercury}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a5ebaa56abfe2d87f68e482f143cc7eb6}{sm\+Venus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_abf28aad1ceeceb064a118b05ee41ed79}{tm\+Venus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_aa02927331e4bd67e04376b6e4a908946}{sm\+Earth}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a2ce0feda4204441c73daa9cf314c7934}{tm\+Earth}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a53e9dd31c9f6252442db1ed2df2f71c0}{sm\+Mars}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_aeb24e6bea3bbd3c43509a97b766b4cd7}{tm\+Mars}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a8b767d351db6d086166c026a036810f0}{sm\+Jupiter}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a5d2cebac193f3753c99d9a800e521d93}{tm\+Jupiter}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ab4c9fc4fe91ffbaaaebe6604071fb7d5}{sm\+Saturn}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a21829ffa49d39e2e30cdf85ac7ac6f06}{tm\+Saturn}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_af7775c2304f9df9bf37b5f1fb7387a48}{sm\+Uranus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a212996112183d43e8d0c1d2614320f9d}{tm\+Uranus}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_a582c080d5c8a6a56411380abeb5a03e6}{sm\+Neptune}}
+\item 
+G\+Lint \mbox{\hyperlink{class_scene_texture_ac8fafaa197bd62d29e625232cc28bdd5}{tm\+Neptune}}
+\item 
+float \mbox{\hyperlink{class_scene_texture_a444d2a4b6d463ab249f94f107f100b5d}{angle}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe responsavel por tudo existente no Sistema Solar. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_texture_ae484bb2160a86922204010cfda100e85}\label{class_scene_texture_ae484bb2160a86922204010cfda100e85}} 
+\index{SceneTexture@{SceneTexture}!SceneTexture@{SceneTexture}}
+\index{SceneTexture@{SceneTexture}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{SceneTexture()}{SceneTexture()}}
+{\footnotesize\ttfamily Scene\+Texture\+::\+Scene\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_texture_a0f8c125b6518c0903c2e47ac7d5b926a}\label{class_scene_texture_a0f8c125b6518c0903c2e47ac7d5b926a}} 
+\index{SceneTexture@{SceneTexture}!calcMoonLocation@{calcMoonLocation}}
+\index{calcMoonLocation@{calcMoonLocation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{calcMoonLocation()}{calcMoonLocation()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::calc\+Moon\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Função responsável pelo cálculo da posição da Lua. 
+
+\mbox{\Hypertarget{class_scene_texture_adcb3a2fbf04c722a62e52f82f3ff81c8}\label{class_scene_texture_adcb3a2fbf04c722a62e52f82f3ff81c8}} 
+\index{SceneTexture@{SceneTexture}!calcPlanetLocations@{calcPlanetLocations}}
+\index{calcPlanetLocations@{calcPlanetLocations}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{calcPlanetLocations()}{calcPlanetLocations()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::calc\+Planet\+Locations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Função responsável pelo calculo da posição dos planetas. 
+
+\mbox{\Hypertarget{class_scene_texture_ab6fca6f40d60e7e5fd673cd3bbc2bd7b}\label{class_scene_texture_ab6fca6f40d60e7e5fd673cd3bbc2bd7b}} 
+\index{SceneTexture@{SceneTexture}!compileAndLinkShader@{compileAndLinkShader}}
+\index{compileAndLinkShader@{compileAndLinkShader}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{compileAndLinkShader()}{compileAndLinkShader()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::compile\+And\+Link\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Função responsável pela compilação de shaders. 
+
+\mbox{\Hypertarget{class_scene_texture_a22fb3251dd146c10643ca0af54b10bd5}\label{class_scene_texture_a22fb3251dd146c10643ca0af54b10bd5}} 
+\index{SceneTexture@{SceneTexture}!initScene@{initScene}}
+\index{initScene@{initScene}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{initScene()}{initScene()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::init\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inicializacao da cena. 
+
+
+
+Implements \mbox{\hyperlink{class_scene_ae76b830c1156bb40bd744afb63776be2}{Scene}}.
+
+\mbox{\Hypertarget{class_scene_texture_a24b162999ad97cbaec810c4257405e97}\label{class_scene_texture_a24b162999ad97cbaec810c4257405e97}} 
+\index{SceneTexture@{SceneTexture}!keyfunc@{keyfunc}}
+\index{keyfunc@{keyfunc}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{keyfunc()}{keyfunc()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::keyfunc (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Funcionalidades das teclas. 
+
+Funcao responsavel pela atribuicao de funcoes a teclas. \mbox{\Hypertarget{class_scene_texture_ab988e3452c65e9b999a80764905159c4}\label{class_scene_texture_ab988e3452c65e9b999a80764905159c4}} 
+\index{SceneTexture@{SceneTexture}!render@{render}}
+\index{render@{render}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main loop da renderizacao. 
+
+
+
+Implements \mbox{\hyperlink{class_scene_a823f4cd60d27932ee16f74adb0421ff6}{Scene}}.
+
+\mbox{\Hypertarget{class_scene_texture_a45e23149cc3ff37694ee17daffa29a01}\label{class_scene_texture_a45e23149cc3ff37694ee17daffa29a01}} 
+\index{SceneTexture@{SceneTexture}!renderBK@{renderBK}}
+\index{renderBK@{renderBK}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{renderBK()}{renderBK()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::render\+BK (\begin{DoxyParamCaption}\item[{float}]{sR }\end{DoxyParamCaption})}
+
+
+
+Renderizacao do background. 
+
+\mbox{\Hypertarget{class_scene_texture_a195528c59a0cb7b6c1eeed33ca689208}\label{class_scene_texture_a195528c59a0cb7b6c1eeed33ca689208}} 
+\index{SceneTexture@{SceneTexture}!renderMenu@{renderMenu}}
+\index{renderMenu@{renderMenu}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{renderMenu()}{renderMenu()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::render\+Menu (\begin{DoxyParamCaption}\item[{int}]{selected }\end{DoxyParamCaption})}
+
+
+
+Renderizacao do menu. 
+
+\mbox{\Hypertarget{class_scene_texture_a3fdce2ddec5b4d71e25d99a487e81450}\label{class_scene_texture_a3fdce2ddec5b4d71e25d99a487e81450}} 
+\index{SceneTexture@{SceneTexture}!renderPlanet@{renderPlanet}}
+\index{renderPlanet@{renderPlanet}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{renderPlanet()}{renderPlanet()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::render\+Planet (\begin{DoxyParamCaption}\item[{float}]{s\+Loc\mbox{[}3\mbox{]},  }\item[{float}]{s\+Li\mbox{[}9\mbox{]},  }\item[{float}]{sR,  }\item[{G\+Lfloat}]{t,  }\item[{G\+Lfloat}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Renderizacao do planeta, onde e efetuada a translacao, rotacao e escalagem. 
+
+\mbox{\Hypertarget{class_scene_texture_a25d792c7e4f5eba8f9c04b28077c6804}\label{class_scene_texture_a25d792c7e4f5eba8f9c04b28077c6804}} 
+\index{SceneTexture@{SceneTexture}!resize@{resize}}
+\index{resize@{resize}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::resize (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alteracao do tamanho do viewport. 
+
+
+
+Implements \mbox{\hyperlink{class_scene_a454bd0a09c125201fbb32e15d4f62fa3}{Scene}}.
+
+\mbox{\Hypertarget{class_scene_texture_afbdc7b7c4eaa91deadd5f907ca501f7b}\label{class_scene_texture_afbdc7b7c4eaa91deadd5f907ca501f7b}} 
+\index{SceneTexture@{SceneTexture}!setMatrices@{setMatrices}}
+\index{setMatrices@{setMatrices}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{setMatrices()}{setMatrices()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::set\+Matrices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Função responsável pelo set das Matrizes, após alterações ao model ou texturas. 
+
+\mbox{\Hypertarget{class_scene_texture_ab923e8fdecd6aa437dfe19c89f604e6b}\label{class_scene_texture_ab923e8fdecd6aa437dfe19c89f604e6b}} 
+\index{SceneTexture@{SceneTexture}!textureLoad@{textureLoad}}
+\index{textureLoad@{textureLoad}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{textureLoad()}{textureLoad()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::texture\+Load (\begin{DoxyParamCaption}\item[{G\+Lubyte $\ast$}]{data,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Função responsável pelo load das texturas. 
+
+\mbox{\Hypertarget{class_scene_texture_a345ac4834ce9785ed91e24d25046a835}\label{class_scene_texture_a345ac4834ce9785ed91e24d25046a835}} 
+\index{SceneTexture@{SceneTexture}!update@{update}}
+\index{update@{update}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Scene\+Texture\+::update (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualizacao da cena. 
+
+
+
+Implements \mbox{\hyperlink{class_scene_aafa9ccf4d019005fdd41672afd13a7a9}{Scene}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_texture_a444d2a4b6d463ab249f94f107f100b5d}\label{class_scene_texture_a444d2a4b6d463ab249f94f107f100b5d}} 
+\index{SceneTexture@{SceneTexture}!angle@{angle}}
+\index{angle@{angle}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float Scene\+Texture\+::angle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a1bc3b7ec6a567f84de74089223004fb7}\label{class_scene_texture_a1bc3b7ec6a567f84de74089223004fb7}} 
+\index{SceneTexture@{SceneTexture}!asteroid@{asteroid}}
+\index{asteroid@{asteroid}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroid}{asteroid}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}}$>$ Scene\+Texture\+::asteroid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objeto responsavel pelos asteróides. 
+
+\mbox{\Hypertarget{class_scene_texture_ab58cb404a41dfafb30669b9e8370aa3c}\label{class_scene_texture_ab58cb404a41dfafb30669b9e8370aa3c}} 
+\index{SceneTexture@{SceneTexture}!asteroidAngle@{asteroidAngle}}
+\index{asteroidAngle@{asteroidAngle}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidAngle}{asteroidAngle}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Angle\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    11.25f, 22.5f, 33.75f, 45.5f, 56.75f, 68.0f, 79.25f, 90.5f, 101.75f, 113.0f, 124.25f, 135.5f, 146.75f, 158.0f, 169.25f, 180.5f,}
+\DoxyCodeLine{    191.75f, 203.0f, 214.25f, 225.5f, 236.75f, 248.0f, 259.25f, 270.5f, 281.75f, 293.0f, 304.25f, 315.5f, 326.75f, 338.0f, 339.25f, 350.5f}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar o angulo a que o asteroide se encontra. 
+
+\mbox{\Hypertarget{class_scene_texture_a7f1a27f3c44ee4c17d0394f37255cd46}\label{class_scene_texture_a7f1a27f3c44ee4c17d0394f37255cd46}} 
+\index{SceneTexture@{SceneTexture}!asteroidDefaultLocations@{asteroidDefaultLocations}}
+\index{asteroidDefaultLocations@{asteroidDefaultLocations}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidDefaultLocations}{asteroidDefaultLocations}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Default\+Locations\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a localizacao default dos asteroides. 
+
+\mbox{\Hypertarget{class_scene_texture_ae26e5fac3105908842e7bd0fa351115f}\label{class_scene_texture_ae26e5fac3105908842e7bd0fa351115f}} 
+\index{SceneTexture@{SceneTexture}!asteroidDistance@{asteroidDistance}}
+\index{asteroidDistance@{asteroidDistance}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidDistance}{asteroidDistance}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Distance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a distancia dos asteroides ao sol. 
+
+\mbox{\Hypertarget{class_scene_texture_ab4d8e8de2b4a9a8ee02af998cfe76a32}\label{class_scene_texture_ab4d8e8de2b4a9a8ee02af998cfe76a32}} 
+\index{SceneTexture@{SceneTexture}!asteroidLight@{asteroidLight}}
+\index{asteroidLight@{asteroidLight}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidLight}{asteroidLight}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Light\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a reflexao dos asteroides. 
+
+\mbox{\Hypertarget{class_scene_texture_a626f618c6ec872833e7ed8d7ba3b8dc2}\label{class_scene_texture_a626f618c6ec872833e7ed8d7ba3b8dc2}} 
+\index{SceneTexture@{SceneTexture}!asteroidLocations@{asteroidLocations}}
+\index{asteroidLocations@{asteroidLocations}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidLocations}{asteroidLocations}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Locations\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a localizacao dos asteroides. 
+
+\mbox{\Hypertarget{class_scene_texture_ae5c021e52e6e1ae0ba014198fc698513}\label{class_scene_texture_ae5c021e52e6e1ae0ba014198fc698513}} 
+\index{SceneTexture@{SceneTexture}!asteroidRadius@{asteroidRadius}}
+\index{asteroidRadius@{asteroidRadius}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidRadius}{asteroidRadius}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Radius\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar o quanto os asteroides vao escalar. 
+
+\mbox{\Hypertarget{class_scene_texture_acd91229942db42f5d356451edc2bd2da}\label{class_scene_texture_acd91229942db42f5d356451edc2bd2da}} 
+\index{SceneTexture@{SceneTexture}!asteroidRotation@{asteroidRotation}}
+\index{asteroidRotation@{asteroidRotation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidRotation}{asteroidRotation}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::asteroid\+Rotation = \{ 10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f,10.f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a velocidade de rotacao dos planetas. 
+
+\mbox{\Hypertarget{class_scene_texture_a559dd4e0ca7372066b1722e4628b0ba9}\label{class_scene_texture_a559dd4e0ca7372066b1722e4628b0ba9}} 
+\index{SceneTexture@{SceneTexture}!asteroidSpeed@{asteroidSpeed}}
+\index{asteroidSpeed@{asteroidSpeed}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{asteroidSpeed}{asteroidSpeed}}
+{\footnotesize\ttfamily float Scene\+Texture\+::asteroid\+Speed\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a velocidade de translacao do planeta. 
+
+\mbox{\Hypertarget{class_scene_texture_a26f87539887244bc249e9ad4e33edb6f}\label{class_scene_texture_a26f87539887244bc249e9ad4e33edb6f}} 
+\index{SceneTexture@{SceneTexture}!bkLight@{bkLight}}
+\index{bkLight@{bkLight}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{bkLight}{bkLight}}
+{\footnotesize\ttfamily float Scene\+Texture\+::bk\+Light \{ \{ 1.\+0f, 1.\+0f, 1.\+0f,1.\+0f, 1.\+0f, 1.\+0f,1.\+0f, 1.\+0f, 1.\+0f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a luz reflexao do material. 
+
+\mbox{\Hypertarget{class_scene_texture_a504efd019f30eae4e8dcbda77d48ffbb}\label{class_scene_texture_a504efd019f30eae4e8dcbda77d48ffbb}} 
+\index{SceneTexture@{SceneTexture}!bkLocation@{bkLocation}}
+\index{bkLocation@{bkLocation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{bkLocation}{bkLocation}}
+{\footnotesize\ttfamily float Scene\+Texture\+::bk\+Location \{ \{0.\+0f, 0.\+0f , 0.\+0f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a localizacao do centro do background. 
+
+\mbox{\Hypertarget{class_scene_texture_a7dd286541ee06b8cd2ac2f0a158b4502}\label{class_scene_texture_a7dd286541ee06b8cd2ac2f0a158b4502}} 
+\index{SceneTexture@{SceneTexture}!bkRadius@{bkRadius}}
+\index{bkRadius@{bkRadius}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{bkRadius}{bkRadius}}
+{\footnotesize\ttfamily float Scene\+Texture\+::bk\+Radius = 150.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar o raio do background. 
+
+\mbox{\Hypertarget{class_scene_texture_ad9c868c99bb6582e0b6c17a6ce7b5c63}\label{class_scene_texture_ad9c868c99bb6582e0b6c17a6ce7b5c63}} 
+\index{SceneTexture@{SceneTexture}!camx@{camx}}
+\index{camx@{camx}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{camx}{camx}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::camx = 2500.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a0da47773808d3245e64e9763ff8cb24d}\label{class_scene_texture_a0da47773808d3245e64e9763ff8cb24d}} 
+\index{SceneTexture@{SceneTexture}!camy@{camy}}
+\index{camy@{camy}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{camy}{camy}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::camy = 500.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_aa9a762db75cdf22ffb88ac901557e5b8}\label{class_scene_texture_aa9a762db75cdf22ffb88ac901557e5b8}} 
+\index{SceneTexture@{SceneTexture}!camz@{camz}}
+\index{camz@{camz}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{camz}{camz}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::camz = 0.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a802ce92008205ae668aafd73082f8a24}\label{class_scene_texture_a802ce92008205ae668aafd73082f8a24}} 
+\index{SceneTexture@{SceneTexture}!eyex@{eyex}}
+\index{eyex@{eyex}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{eyex}{eyex}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::eyex = 0.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a2a402f0b2d0eeeea92889a61e2ec372c}\label{class_scene_texture_a2a402f0b2d0eeeea92889a61e2ec372c}} 
+\index{SceneTexture@{SceneTexture}!eyey@{eyey}}
+\index{eyey@{eyey}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{eyey}{eyey}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::eyey = 0.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a886adca6acb15f43797ca32b3a6e3330}\label{class_scene_texture_a886adca6acb15f43797ca32b3a6e3330}} 
+\index{SceneTexture@{SceneTexture}!eyez@{eyez}}
+\index{eyez@{eyez}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{eyez}{eyez}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::eyez = 0.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a7c2bfeb08bcea36358e40486f4f0b845}\label{class_scene_texture_a7c2bfeb08bcea36358e40486f4f0b845}} 
+\index{SceneTexture@{SceneTexture}!is2d@{is2d}}
+\index{is2d@{is2d}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{is2d}{is2d}}
+{\footnotesize\ttfamily bool Scene\+Texture\+::is2d = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a659107efe5e192a00336cfdf2240295b}\label{class_scene_texture_a659107efe5e192a00336cfdf2240295b}} 
+\index{SceneTexture@{SceneTexture}!isMenu@{isMenu}}
+\index{isMenu@{isMenu}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{isMenu}{isMenu}}
+{\footnotesize\ttfamily bool Scene\+Texture\+::is\+Menu = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_a2b54560296f6bb1cd10a7f62a891641e}\label{class_scene_texture_a2b54560296f6bb1cd10a7f62a891641e}} 
+\index{SceneTexture@{SceneTexture}!isTroll@{isTroll}}
+\index{isTroll@{isTroll}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{isTroll}{isTroll}}
+{\footnotesize\ttfamily bool Scene\+Texture\+::is\+Troll = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_acd845ab828b015b22f1b92a111130076}\label{class_scene_texture_acd845ab828b015b22f1b92a111130076}} 
+\index{SceneTexture@{SceneTexture}!menu@{menu}}
+\index{menu@{menu}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plane}{Plane}} Scene\+Texture\+::menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Plano responsavel pela exibicao do menu. 
+
+\mbox{\Hypertarget{class_scene_texture_a679a4ff577f9a7a82018aff021a94c13}\label{class_scene_texture_a679a4ff577f9a7a82018aff021a94c13}} 
+\index{SceneTexture@{SceneTexture}!moonAngle@{moonAngle}}
+\index{moonAngle@{moonAngle}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonAngle}{moonAngle}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Angle = \{ 0.\+0f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar o angulo de translacao da lua. 
+
+\mbox{\Hypertarget{class_scene_texture_ae53e83f7c540d834710356dc43b991f3}\label{class_scene_texture_ae53e83f7c540d834710356dc43b991f3}} 
+\index{SceneTexture@{SceneTexture}!moonDefaultLocation@{moonDefaultLocation}}
+\index{moonDefaultLocation@{moonDefaultLocation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonDefaultLocation}{moonDefaultLocation}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Default\+Location = \{ \{ \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}1\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}2\mbox{]} + 50.\+0f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a localizacao default das luas. 
+
+\mbox{\Hypertarget{class_scene_texture_abb843fec1a05d24bb5ae6a9795cab5c7}\label{class_scene_texture_abb843fec1a05d24bb5ae6a9795cab5c7}} 
+\index{SceneTexture@{SceneTexture}!moonDistance@{moonDistance}}
+\index{moonDistance@{moonDistance}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonDistance}{moonDistance}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Distance = \{ 50.\+0f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a distancia ao centro de translacao. 
+
+\mbox{\Hypertarget{class_scene_texture_ab73f47bec9999c6183e98279b5d29be6}\label{class_scene_texture_ab73f47bec9999c6183e98279b5d29be6}} 
+\index{SceneTexture@{SceneTexture}!moonLight@{moonLight}}
+\index{moonLight@{moonLight}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonLight}{moonLight}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Light \{ \{0.\+9f, 0.\+9f, 0.\+9f,0.\+95f, 0.\+95f, 0.\+95f,0.\+1f, 0.\+1f, 0.\+1f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a reflexao da lua. 
+
+\mbox{\Hypertarget{class_scene_texture_a1b2d81b63010dd6d8ec1022e097eb7c3}\label{class_scene_texture_a1b2d81b63010dd6d8ec1022e097eb7c3}} 
+\index{SceneTexture@{SceneTexture}!moonlocations@{moonlocations}}
+\index{moonlocations@{moonlocations}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonlocations}{moonlocations}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moonlocations = \{ \{ \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}1\mbox{]}, \mbox{\hyperlink{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}{moon\+Trans\+Center}}\mbox{[}0\mbox{]}\mbox{[}2\mbox{]} + 50.\+0f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a localizacao das luas. 
+
+\mbox{\Hypertarget{class_scene_texture_ac301828f6b86e80a798ae0531c349c63}\label{class_scene_texture_ac301828f6b86e80a798ae0531c349c63}} 
+\index{SceneTexture@{SceneTexture}!moonRadius@{moonRadius}}
+\index{moonRadius@{moonRadius}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonRadius}{moonRadius}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Radius = \{ 0.\+1f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar o raio da lua. 
+
+\mbox{\Hypertarget{class_scene_texture_a867c1b5be3195fe900a403722b170036}\label{class_scene_texture_a867c1b5be3195fe900a403722b170036}} 
+\index{SceneTexture@{SceneTexture}!moonRotation@{moonRotation}}
+\index{moonRotation@{moonRotation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonRotation}{moonRotation}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::moon\+Rotation = 10.f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a velocidade de rotacao da lua. 
+
+\mbox{\Hypertarget{class_scene_texture_ae86479797b3e8f1afb9dc59c83534686}\label{class_scene_texture_ae86479797b3e8f1afb9dc59c83534686}} 
+\index{SceneTexture@{SceneTexture}!moonSpeed@{moonSpeed}}
+\index{moonSpeed@{moonSpeed}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonSpeed}{moonSpeed}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Speed = \{ 100.\+0f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a velocidade da lua. 
+
+\mbox{\Hypertarget{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}\label{class_scene_texture_a116f1f15f385d94dee75092b2feaa20c}} 
+\index{SceneTexture@{SceneTexture}!moonTransCenter@{moonTransCenter}}
+\index{moonTransCenter@{moonTransCenter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{moonTransCenter}{moonTransCenter}}
+{\footnotesize\ttfamily float Scene\+Texture\+::moon\+Trans\+Center = \{ \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{Scene\+Texture\+::planetlocations}}\mbox{[}2\mbox{]}\mbox{[}0\mbox{]}, \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{Scene\+Texture\+::planetlocations}}\mbox{[}2\mbox{]}\mbox{[}1\mbox{]}, \mbox{\hyperlink{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}{Scene\+Texture\+::planetlocations}}\mbox{[}2\mbox{]}\mbox{[}2\mbox{]} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel para saber o centro de gravidade da lua. 
+
+\mbox{\Hypertarget{class_scene_texture_a7a09bbdb36a7e736717f99c30aa76220}\label{class_scene_texture_a7a09bbdb36a7e736717f99c30aa76220}} 
+\index{SceneTexture@{SceneTexture}!paused@{paused}}
+\index{paused@{paused}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{paused}{paused}}
+{\footnotesize\ttfamily bool Scene\+Texture\+::paused = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_ae804a3bbd5b89796760b7d6723b42558}\label{class_scene_texture_ae804a3bbd5b89796760b7d6723b42558}} 
+\index{SceneTexture@{SceneTexture}!planetAngle@{planetAngle}}
+\index{planetAngle@{planetAngle}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetAngle}{planetAngle}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planet\+Angle = \{ 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f, 0.\+0f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar o angulo de translacao onde o planeta se encontra. 
+
+\mbox{\Hypertarget{class_scene_texture_acd7eab546d7fb95612c4708122a4871c}\label{class_scene_texture_acd7eab546d7fb95612c4708122a4871c}} 
+\index{SceneTexture@{SceneTexture}!planetDefaultlocations@{planetDefaultlocations}}
+\index{planetDefaultlocations@{planetDefaultlocations}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetDefaultlocations}{planetDefaultlocations}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planet\+Defaultlocations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{0.0f, 0.f, 597.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 748.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 889.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 1147.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 1570.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 2150.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 2590.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 2820.0f\} }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar a localizacao default do planeta. 
+
+\mbox{\Hypertarget{class_scene_texture_a21b953bda09366aa9c43d2da0f4e55fc}\label{class_scene_texture_a21b953bda09366aa9c43d2da0f4e55fc}} 
+\index{SceneTexture@{SceneTexture}!planetDistance@{planetDistance}}
+\index{planetDistance@{planetDistance}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetDistance}{planetDistance}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planet\+Distance\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    597.0f,}
+\DoxyCodeLine{    748.0f,}
+\DoxyCodeLine{    889.0f,}
+\DoxyCodeLine{    1047.0f,}
+\DoxyCodeLine{    1570.0f,}
+\DoxyCodeLine{    2150.0f,}
+\DoxyCodeLine{    2590.0f,}
+\DoxyCodeLine{    2820.0f}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar a distancia ao sol ao qual o planeta se encontra. 
+
+\mbox{\Hypertarget{class_scene_texture_ac6f6512cb8d1c29b8d441554086506e0}\label{class_scene_texture_ac6f6512cb8d1c29b8d441554086506e0}} 
+\index{SceneTexture@{SceneTexture}!planetLight@{planetLight}}
+\index{planetLight@{planetLight}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetLight}{planetLight}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planet\+Light\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \{0.8f, 0.8f, 0.8f,0.8f, 0.8f, 0.8f,0.7f, 0.7f, 0.7f\},}
+\DoxyCodeLine{    \{0.7f, 0.7f, 0.8f,0.7f, 0.7f, 0.7f,0.6f, 0.6f, 0.6f\},}
+\DoxyCodeLine{    \{0.6f, 0.6f, 0.6f,0.6f, 0.6f, 0.6f,0.5f, 0.5f, 0.5f\},}
+\DoxyCodeLine{    \{0.5f, 0.5f, 0.5f,0.5f, 0.5f, 0.5f,0.4f, 0.4f, 0.4f\},}
+\DoxyCodeLine{    \{0.3f, 0.3f, 0.3f,0.4f, 0.4f, 0.4f,0.3f, 0.3f, 0.3f\},}
+\DoxyCodeLine{    \{0.3f, 0.3f, 0.3f,0.3f, 0.3f, 0.3f,0.2f, 0.2f, 0.2f\},}
+\DoxyCodeLine{    \{0.3f, 0.3f, 0.3f,0.2f, 0.2f, 0.2f,0.2f, 0.2f, 0.2f\},}
+\DoxyCodeLine{    \{0.2f, 0.2f, 0.2f,0.1f, 0.1f, 0.1f,0.2f, 0.2f, 0.2f\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar os atributos de reflexao do planeta. 
+
+\mbox{\Hypertarget{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}\label{class_scene_texture_a1492e81fe8f97df9c6798e46ab09cb28}} 
+\index{SceneTexture@{SceneTexture}!planetlocations@{planetlocations}}
+\index{planetlocations@{planetlocations}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetlocations}{planetlocations}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planetlocations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{0.0f, 0.f, 597.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 748.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 889.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 1047.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 1570.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 2150.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 2590.0f\}, }
+\DoxyCodeLine{    \{0.0f, 0.f, 2820.0f\} }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar a localizacao do planeta. 
+
+\mbox{\Hypertarget{class_scene_texture_a8a848a35ca146f5d75c66caf13a120ef}\label{class_scene_texture_a8a848a35ca146f5d75c66caf13a120ef}} 
+\index{SceneTexture@{SceneTexture}!planetRadius@{planetRadius}}
+\index{planetRadius@{planetRadius}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetRadius}{planetRadius}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planet\+Radius\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    0.38f,}
+\DoxyCodeLine{    0.64f,}
+\DoxyCodeLine{    0.66f,}
+\DoxyCodeLine{    0.44f,}
+\DoxyCodeLine{    5.15f,}
+\DoxyCodeLine{    3.0f,}
+\DoxyCodeLine{    1.86f,}
+\DoxyCodeLine{    1.80f}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar quanto o planeta vai escalar. 
+
+\mbox{\Hypertarget{class_scene_texture_af88e169aa03c2541615de23ece5c6d80}\label{class_scene_texture_af88e169aa03c2541615de23ece5c6d80}} 
+\index{SceneTexture@{SceneTexture}!planetRotation@{planetRotation}}
+\index{planetRotation@{planetRotation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetRotation}{planetRotation}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::planet\+Rotation = \{ 10.f,20.f,30.f,40.f,50.f,60.f,70.f,80.f \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a velocidade de rotacao do planeta. 
+
+\mbox{\Hypertarget{class_scene_texture_a7d69f31178c4fa3ecc26a36201a1d2f9}\label{class_scene_texture_a7d69f31178c4fa3ecc26a36201a1d2f9}} 
+\index{SceneTexture@{SceneTexture}!planetSpeed@{planetSpeed}}
+\index{planetSpeed@{planetSpeed}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{planetSpeed}{planetSpeed}}
+{\footnotesize\ttfamily float Scene\+Texture\+::planet\+Speed\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    10.0f,}
+\DoxyCodeLine{    5.2f,}
+\DoxyCodeLine{    4.0f,}
+\DoxyCodeLine{    2.3f,}
+\DoxyCodeLine{    1.84f,}
+\DoxyCodeLine{    2.0f,}
+\DoxyCodeLine{    2.12f,}
+\DoxyCodeLine{    2.22f}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Variavel responsavel por guardar a velocidade de translacao do planeta. 
+
+\mbox{\Hypertarget{class_scene_texture_abe4ceb019975a851e93b9fe39bc12850}\label{class_scene_texture_abe4ceb019975a851e93b9fe39bc12850}} 
+\index{SceneTexture@{SceneTexture}!prog@{prog}}
+\index{prog@{prog}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{prog}{prog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_l_s_l_program}{G\+L\+S\+L\+Program}} Scene\+Texture\+::prog\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a9effaaef46b836601ba47ffc7b680a0a}\label{class_scene_texture_a9effaaef46b836601ba47ffc7b680a0a}} 
+\index{SceneTexture@{SceneTexture}!retry@{retry}}
+\index{retry@{retry}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{retry}{retry}}
+{\footnotesize\ttfamily bool Scene\+Texture\+::retry = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_aa57a081d184e1d120e1252bf9b282dec}\label{class_scene_texture_aa57a081d184e1d120e1252bf9b282dec}} 
+\index{SceneTexture@{SceneTexture}!rotation@{rotation}}
+\index{rotation@{rotation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily G\+Lfloat Scene\+Texture\+::rotation = 100.f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a rotacao do Sol. 
+
+\mbox{\Hypertarget{class_scene_texture_a4f32faf70f1f9444bbefcaa325542587}\label{class_scene_texture_a4f32faf70f1f9444bbefcaa325542587}} 
+\index{SceneTexture@{SceneTexture}!sAbel@{sAbel}}
+\index{sAbel@{sAbel}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sAbel}{sAbel}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Abel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a57e3ba4f93f35e59ee6d506100980ae2}\label{class_scene_texture_a57e3ba4f93f35e59ee6d506100980ae2}} 
+\index{SceneTexture@{SceneTexture}!sAsteroid@{sAsteroid}}
+\index{sAsteroid@{sAsteroid}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sAsteroid}{sAsteroid}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Asteroid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a33b834bc0cc2b8eaf72e4abfe05220dc}\label{class_scene_texture_a33b834bc0cc2b8eaf72e4abfe05220dc}} 
+\index{SceneTexture@{SceneTexture}!saturn@{saturn}}
+\index{saturn@{saturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{saturn}{saturn}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}}$>$ Scene\+Texture\+::saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objeto responsavel Saturno. 
+
+\mbox{\Hypertarget{class_scene_texture_ad8303eea711415ff5d20c8ccfc860396}\label{class_scene_texture_ad8303eea711415ff5d20c8ccfc860396}} 
+\index{SceneTexture@{SceneTexture}!sBlue@{sBlue}}
+\index{sBlue@{sBlue}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sBlue}{sBlue}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Blue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ae1772ad81c05c1861e93432f76a93e0f}\label{class_scene_texture_ae1772ad81c05c1861e93432f76a93e0f}} 
+\index{SceneTexture@{SceneTexture}!sEarth@{sEarth}}
+\index{sEarth@{sEarth}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sEarth}{sEarth}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Earth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_af6062bdf26eb7625f38d8e2d1508fb60}\label{class_scene_texture_af6062bdf26eb7625f38d8e2d1508fb60}} 
+\index{SceneTexture@{SceneTexture}!selected@{selected}}
+\index{selected@{selected}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily int Scene\+Texture\+::selected = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_texture_ab604fd9bff0f6d57dc5ee3e0ded071d5}\label{class_scene_texture_ab604fd9bff0f6d57dc5ee3e0ded071d5}} 
+\index{SceneTexture@{SceneTexture}!sJupiter@{sJupiter}}
+\index{sJupiter@{sJupiter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sJupiter}{sJupiter}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Jupiter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ae7e2fc818536ae88c04d2e1f13ef3006}\label{class_scene_texture_ae7e2fc818536ae88c04d2e1f13ef3006}} 
+\index{SceneTexture@{SceneTexture}!sMars@{sMars}}
+\index{sMars@{sMars}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sMars}{sMars}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Mars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_aa02927331e4bd67e04376b6e4a908946}\label{class_scene_texture_aa02927331e4bd67e04376b6e4a908946}} 
+\index{SceneTexture@{SceneTexture}!smEarth@{smEarth}}
+\index{smEarth@{smEarth}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smEarth}{smEarth}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Earth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ac4f9cb6f993bcaa2425b98116bc19c9a}\label{class_scene_texture_ac4f9cb6f993bcaa2425b98116bc19c9a}} 
+\index{SceneTexture@{SceneTexture}!sMercury@{sMercury}}
+\index{sMercury@{sMercury}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sMercury}{sMercury}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Mercury\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a8b767d351db6d086166c026a036810f0}\label{class_scene_texture_a8b767d351db6d086166c026a036810f0}} 
+\index{SceneTexture@{SceneTexture}!smJupiter@{smJupiter}}
+\index{smJupiter@{smJupiter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smJupiter}{smJupiter}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Jupiter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a53e9dd31c9f6252442db1ed2df2f71c0}\label{class_scene_texture_a53e9dd31c9f6252442db1ed2df2f71c0}} 
+\index{SceneTexture@{SceneTexture}!smMars@{smMars}}
+\index{smMars@{smMars}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smMars}{smMars}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Mars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ab54a99ec56fef2cac52ca7c699d12f44}\label{class_scene_texture_ab54a99ec56fef2cac52ca7c699d12f44}} 
+\index{SceneTexture@{SceneTexture}!smMercury@{smMercury}}
+\index{smMercury@{smMercury}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smMercury}{smMercury}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Mercury\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a582c080d5c8a6a56411380abeb5a03e6}\label{class_scene_texture_a582c080d5c8a6a56411380abeb5a03e6}} 
+\index{SceneTexture@{SceneTexture}!smNeptune@{smNeptune}}
+\index{smNeptune@{smNeptune}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smNeptune}{smNeptune}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Neptune\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a82b3430171fdc1375262af0f0b769bba}\label{class_scene_texture_a82b3430171fdc1375262af0f0b769bba}} 
+\index{SceneTexture@{SceneTexture}!sMoon@{sMoon}}
+\index{sMoon@{sMoon}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sMoon}{sMoon}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Moon\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ab4c9fc4fe91ffbaaaebe6604071fb7d5}\label{class_scene_texture_ab4c9fc4fe91ffbaaaebe6604071fb7d5}} 
+\index{SceneTexture@{SceneTexture}!smSaturn@{smSaturn}}
+\index{smSaturn@{smSaturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smSaturn}{smSaturn}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_afc1e08159c5b7a3c947e8ba09d093ec3}\label{class_scene_texture_afc1e08159c5b7a3c947e8ba09d093ec3}} 
+\index{SceneTexture@{SceneTexture}!smSun@{smSun}}
+\index{smSun@{smSun}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smSun}{smSun}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Sun\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_af7775c2304f9df9bf37b5f1fb7387a48}\label{class_scene_texture_af7775c2304f9df9bf37b5f1fb7387a48}} 
+\index{SceneTexture@{SceneTexture}!smUranus@{smUranus}}
+\index{smUranus@{smUranus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smUranus}{smUranus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Uranus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a5ebaa56abfe2d87f68e482f143cc7eb6}\label{class_scene_texture_a5ebaa56abfe2d87f68e482f143cc7eb6}} 
+\index{SceneTexture@{SceneTexture}!smVenus@{smVenus}}
+\index{smVenus@{smVenus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{smVenus}{smVenus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::sm\+Venus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a4a088e73b707aa9ecdca2fa70e4385b8}\label{class_scene_texture_a4a088e73b707aa9ecdca2fa70e4385b8}} 
+\index{SceneTexture@{SceneTexture}!sNeptune@{sNeptune}}
+\index{sNeptune@{sNeptune}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sNeptune}{sNeptune}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Neptune\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ae6bfffe6f3b9b2ae15ef0a8918899a7d}\label{class_scene_texture_ae6bfffe6f3b9b2ae15ef0a8918899a7d}} 
+\index{SceneTexture@{SceneTexture}!sSaturn@{sSaturn}}
+\index{sSaturn@{sSaturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sSaturn}{sSaturn}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ac9d4ef546f2f2665fdee5378001aaff9}\label{class_scene_texture_ac9d4ef546f2f2665fdee5378001aaff9}} 
+\index{SceneTexture@{SceneTexture}!sSkyBox@{sSkyBox}}
+\index{sSkyBox@{sSkyBox}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sSkyBox}{sSkyBox}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Sky\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a25f15686621dc6caa3ab018fb56d6674}\label{class_scene_texture_a25f15686621dc6caa3ab018fb56d6674}} 
+\index{SceneTexture@{SceneTexture}!sSun@{sSun}}
+\index{sSun@{sSun}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sSun}{sSun}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Sun\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a07e5ffc66ac2eeeac00400230340a036}\label{class_scene_texture_a07e5ffc66ac2eeeac00400230340a036}} 
+\index{SceneTexture@{SceneTexture}!starLight@{starLight}}
+\index{starLight@{starLight}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{starLight}{starLight}}
+{\footnotesize\ttfamily float Scene\+Texture\+::star\+Light \{ \{ 1.f, 1.f, 1.f,1.f, 1.f, 1.f,1.f, 1.f, 1.f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a reflexao do Sol. 
+
+\mbox{\Hypertarget{class_scene_texture_a1987402ddcabace429e49b7f00823b3b}\label{class_scene_texture_a1987402ddcabace429e49b7f00823b3b}} 
+\index{SceneTexture@{SceneTexture}!starLocation@{starLocation}}
+\index{starLocation@{starLocation}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{starLocation}{starLocation}}
+{\footnotesize\ttfamily float Scene\+Texture\+::star\+Location \{ \{0.\+0f, 0.\+0f , 0.\+0f\} \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar a localizacao do centro do Sol. 
+
+\mbox{\Hypertarget{class_scene_texture_a79a357a19513f3fe334e44e415aa1725}\label{class_scene_texture_a79a357a19513f3fe334e44e415aa1725}} 
+\index{SceneTexture@{SceneTexture}!starRadius@{starRadius}}
+\index{starRadius@{starRadius}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{starRadius}{starRadius}}
+{\footnotesize\ttfamily float Scene\+Texture\+::star\+Radius = 10.\+0f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Variavel responsavel por guardar o raio do Sol. 
+
+\mbox{\Hypertarget{class_scene_texture_ab9a4fa22043bde7393f263ef3d220981}\label{class_scene_texture_ab9a4fa22043bde7393f263ef3d220981}} 
+\index{SceneTexture@{SceneTexture}!sUranus@{sUranus}}
+\index{sUranus@{sUranus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sUranus}{sUranus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Uranus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ada8a14d5318c37b2a153e5d0b7308661}\label{class_scene_texture_ada8a14d5318c37b2a153e5d0b7308661}} 
+\index{SceneTexture@{SceneTexture}!sVenus@{sVenus}}
+\index{sVenus@{sVenus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{sVenus}{sVenus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::s\+Venus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a2d2763c06ef9204a162e1236c4c6dd1d}\label{class_scene_texture_a2d2763c06ef9204a162e1236c4c6dd1d}} 
+\index{SceneTexture@{SceneTexture}!tAbel@{tAbel}}
+\index{tAbel@{tAbel}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tAbel}{tAbel}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Abel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a222c9395222ee7a5a969bdbb1c0adb89}\label{class_scene_texture_a222c9395222ee7a5a969bdbb1c0adb89}} 
+\index{SceneTexture@{SceneTexture}!tAsteroid@{tAsteroid}}
+\index{tAsteroid@{tAsteroid}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tAsteroid}{tAsteroid}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Asteroid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ab5afac145c6a36d096ba5f20b3991b63}\label{class_scene_texture_ab5afac145c6a36d096ba5f20b3991b63}} 
+\index{SceneTexture@{SceneTexture}!tBlue@{tBlue}}
+\index{tBlue@{tBlue}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tBlue}{tBlue}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Blue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a8f2837ea24c08d4fbc89361ab5862ffb}\label{class_scene_texture_a8f2837ea24c08d4fbc89361ab5862ffb}} 
+\index{SceneTexture@{SceneTexture}!tEarth@{tEarth}}
+\index{tEarth@{tEarth}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tEarth}{tEarth}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Earth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_af512e39ce145913d8359e93f87076a66}\label{class_scene_texture_af512e39ce145913d8359e93f87076a66}} 
+\index{SceneTexture@{SceneTexture}!texAbel@{texAbel}}
+\index{texAbel@{texAbel}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texAbel}{texAbel}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Abel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a7067860db942c2e301896351dc0f5eb7}\label{class_scene_texture_a7067860db942c2e301896351dc0f5eb7}} 
+\index{SceneTexture@{SceneTexture}!texAsteroid@{texAsteroid}}
+\index{texAsteroid@{texAsteroid}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texAsteroid}{texAsteroid}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Asteroid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a1f21ab3a004beb128c15821bbab8ec9f}\label{class_scene_texture_a1f21ab3a004beb128c15821bbab8ec9f}} 
+\index{SceneTexture@{SceneTexture}!texBlue@{texBlue}}
+\index{texBlue@{texBlue}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texBlue}{texBlue}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Blue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a4a2b33714928e8949304af86101e964c}\label{class_scene_texture_a4a2b33714928e8949304af86101e964c}} 
+\index{SceneTexture@{SceneTexture}!texEarth@{texEarth}}
+\index{texEarth@{texEarth}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texEarth}{texEarth}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Earth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_aa585db7cc129b02d4c096e67ade0320e}\label{class_scene_texture_aa585db7cc129b02d4c096e67ade0320e}} 
+\index{SceneTexture@{SceneTexture}!texJupiter@{texJupiter}}
+\index{texJupiter@{texJupiter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texJupiter}{texJupiter}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Jupiter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a1e09227ae29f43abfa473e75c764a26a}\label{class_scene_texture_a1e09227ae29f43abfa473e75c764a26a}} 
+\index{SceneTexture@{SceneTexture}!texMars@{texMars}}
+\index{texMars@{texMars}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texMars}{texMars}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Mars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_aade0221c14da45fc9b9a80869c7485f8}\label{class_scene_texture_aade0221c14da45fc9b9a80869c7485f8}} 
+\index{SceneTexture@{SceneTexture}!texmEarth@{texmEarth}}
+\index{texmEarth@{texmEarth}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmEarth}{texmEarth}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Earth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_aaee7f2e920954368fbd97f448ff4228f}\label{class_scene_texture_aaee7f2e920954368fbd97f448ff4228f}} 
+\index{SceneTexture@{SceneTexture}!texMercury@{texMercury}}
+\index{texMercury@{texMercury}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texMercury}{texMercury}}
+{\footnotesize\ttfamily G\+Lubyte$\ast$ Scene\+Texture\+::tex\+Mercury\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_af94aecbb8ff37792f98dff183a40f2f6}\label{class_scene_texture_af94aecbb8ff37792f98dff183a40f2f6}} 
+\index{SceneTexture@{SceneTexture}!texmJupiter@{texmJupiter}}
+\index{texmJupiter@{texmJupiter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmJupiter}{texmJupiter}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Jupiter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a9ef242ab0416242acf6e1603c9cbd7d9}\label{class_scene_texture_a9ef242ab0416242acf6e1603c9cbd7d9}} 
+\index{SceneTexture@{SceneTexture}!texmMars@{texmMars}}
+\index{texmMars@{texmMars}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmMars}{texmMars}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Mars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a6ce6fd7393996a7236c17192e8977e1e}\label{class_scene_texture_a6ce6fd7393996a7236c17192e8977e1e}} 
+\index{SceneTexture@{SceneTexture}!texmMercury@{texmMercury}}
+\index{texmMercury@{texmMercury}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmMercury}{texmMercury}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Mercury\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a9fa1bf870d39f1982f5492540eb7b284}\label{class_scene_texture_a9fa1bf870d39f1982f5492540eb7b284}} 
+\index{SceneTexture@{SceneTexture}!texmNeptune@{texmNeptune}}
+\index{texmNeptune@{texmNeptune}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmNeptune}{texmNeptune}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Neptune\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a1f30e2089ab6a1dac646a764eda60f3b}\label{class_scene_texture_a1f30e2089ab6a1dac646a764eda60f3b}} 
+\index{SceneTexture@{SceneTexture}!texMoon@{texMoon}}
+\index{texMoon@{texMoon}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texMoon}{texMoon}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Moon\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a709891945f1538bbc8c44af2b6764c12}\label{class_scene_texture_a709891945f1538bbc8c44af2b6764c12}} 
+\index{SceneTexture@{SceneTexture}!texmSaturn@{texmSaturn}}
+\index{texmSaturn@{texmSaturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmSaturn}{texmSaturn}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_acdac18fbb4997d82fef0a8275ad2ad31}\label{class_scene_texture_acdac18fbb4997d82fef0a8275ad2ad31}} 
+\index{SceneTexture@{SceneTexture}!texmSun@{texmSun}}
+\index{texmSun@{texmSun}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmSun}{texmSun}}
+{\footnotesize\ttfamily G\+Lubyte$\ast$ Scene\+Texture\+::texm\+Sun\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_af7181f52f463ff4f930aeeb0822249cf}\label{class_scene_texture_af7181f52f463ff4f930aeeb0822249cf}} 
+\index{SceneTexture@{SceneTexture}!texmUranus@{texmUranus}}
+\index{texmUranus@{texmUranus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmUranus}{texmUranus}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Uranus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a4de3ac9ecbf0e55dcde936f701854261}\label{class_scene_texture_a4de3ac9ecbf0e55dcde936f701854261}} 
+\index{SceneTexture@{SceneTexture}!texmVenus@{texmVenus}}
+\index{texmVenus@{texmVenus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texmVenus}{texmVenus}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::texm\+Venus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a9f7407018a84259637bb9e1abf274dc1}\label{class_scene_texture_a9f7407018a84259637bb9e1abf274dc1}} 
+\index{SceneTexture@{SceneTexture}!texNeptune@{texNeptune}}
+\index{texNeptune@{texNeptune}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texNeptune}{texNeptune}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Neptune\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a814392ccebc283a0807df7fcb59dadcc}\label{class_scene_texture_a814392ccebc283a0807df7fcb59dadcc}} 
+\index{SceneTexture@{SceneTexture}!texSaturn@{texSaturn}}
+\index{texSaturn@{texSaturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texSaturn}{texSaturn}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a1b0ce6fc3c9a06095545fa6395723420}\label{class_scene_texture_a1b0ce6fc3c9a06095545fa6395723420}} 
+\index{SceneTexture@{SceneTexture}!texSkyBox@{texSkyBox}}
+\index{texSkyBox@{texSkyBox}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texSkyBox}{texSkyBox}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Sky\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_aaa5fdc31a3a25575c7b547f719c46f1c}\label{class_scene_texture_aaa5fdc31a3a25575c7b547f719c46f1c}} 
+\index{SceneTexture@{SceneTexture}!texSun@{texSun}}
+\index{texSun@{texSun}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texSun}{texSun}}
+{\footnotesize\ttfamily G\+Lubyte$\ast$ Scene\+Texture\+::tex\+Sun\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Exemplar da variável que guarda uma textura. 
+
+\mbox{\Hypertarget{class_scene_texture_a124827d3cc1d79b98ee664b8126b2794}\label{class_scene_texture_a124827d3cc1d79b98ee664b8126b2794}} 
+\index{SceneTexture@{SceneTexture}!textL@{textL}}
+\index{textL@{textL}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{textL}{textL}}
+{\footnotesize\ttfamily G\+Luint Scene\+Texture\+::textL}
+
+
+
+Variavel onde as texturas sao geradas. 
+
+\mbox{\Hypertarget{class_scene_texture_a319a5cbc76e3a921e55a49c72a68c941}\label{class_scene_texture_a319a5cbc76e3a921e55a49c72a68c941}} 
+\index{SceneTexture@{SceneTexture}!texUranus@{texUranus}}
+\index{texUranus@{texUranus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texUranus}{texUranus}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Uranus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_af9d9bcbed0f4765c35f1a4a785b7fedc}\label{class_scene_texture_af9d9bcbed0f4765c35f1a4a785b7fedc}} 
+\index{SceneTexture@{SceneTexture}!texVenus@{texVenus}}
+\index{texVenus@{texVenus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{texVenus}{texVenus}}
+{\footnotesize\ttfamily G\+Lubyte $\ast$ Scene\+Texture\+::tex\+Venus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_acda99f9f004061dd21d53ff9418a0326}\label{class_scene_texture_acda99f9f004061dd21d53ff9418a0326}} 
+\index{SceneTexture@{SceneTexture}!tJupiter@{tJupiter}}
+\index{tJupiter@{tJupiter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tJupiter}{tJupiter}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Jupiter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a9335b0e58e70b58638123b4bda2e814f}\label{class_scene_texture_a9335b0e58e70b58638123b4bda2e814f}} 
+\index{SceneTexture@{SceneTexture}!tMars@{tMars}}
+\index{tMars@{tMars}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tMars}{tMars}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Mars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a2ce0feda4204441c73daa9cf314c7934}\label{class_scene_texture_a2ce0feda4204441c73daa9cf314c7934}} 
+\index{SceneTexture@{SceneTexture}!tmEarth@{tmEarth}}
+\index{tmEarth@{tmEarth}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmEarth}{tmEarth}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Earth\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a61bc0a019debb88459abbfeb0596c5b5}\label{class_scene_texture_a61bc0a019debb88459abbfeb0596c5b5}} 
+\index{SceneTexture@{SceneTexture}!tMercury@{tMercury}}
+\index{tMercury@{tMercury}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tMercury}{tMercury}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Mercury\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a5d2cebac193f3753c99d9a800e521d93}\label{class_scene_texture_a5d2cebac193f3753c99d9a800e521d93}} 
+\index{SceneTexture@{SceneTexture}!tmJupiter@{tmJupiter}}
+\index{tmJupiter@{tmJupiter}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmJupiter}{tmJupiter}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Jupiter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_aeb24e6bea3bbd3c43509a97b766b4cd7}\label{class_scene_texture_aeb24e6bea3bbd3c43509a97b766b4cd7}} 
+\index{SceneTexture@{SceneTexture}!tmMars@{tmMars}}
+\index{tmMars@{tmMars}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmMars}{tmMars}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Mars\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a032c62d4416f9b8b77567aa287069280}\label{class_scene_texture_a032c62d4416f9b8b77567aa287069280}} 
+\index{SceneTexture@{SceneTexture}!tmMercury@{tmMercury}}
+\index{tmMercury@{tmMercury}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmMercury}{tmMercury}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Mercury\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ac8fafaa197bd62d29e625232cc28bdd5}\label{class_scene_texture_ac8fafaa197bd62d29e625232cc28bdd5}} 
+\index{SceneTexture@{SceneTexture}!tmNeptune@{tmNeptune}}
+\index{tmNeptune@{tmNeptune}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmNeptune}{tmNeptune}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Neptune\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a41ed87daa8bae41cecc772c5a2c6ae2f}\label{class_scene_texture_a41ed87daa8bae41cecc772c5a2c6ae2f}} 
+\index{SceneTexture@{SceneTexture}!tMoon@{tMoon}}
+\index{tMoon@{tMoon}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tMoon}{tMoon}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Moon\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a21829ffa49d39e2e30cdf85ac7ac6f06}\label{class_scene_texture_a21829ffa49d39e2e30cdf85ac7ac6f06}} 
+\index{SceneTexture@{SceneTexture}!tmSaturn@{tmSaturn}}
+\index{tmSaturn@{tmSaturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmSaturn}{tmSaturn}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ac0e4b7e6db4750a23acbfd3f4312dd36}\label{class_scene_texture_ac0e4b7e6db4750a23acbfd3f4312dd36}} 
+\index{SceneTexture@{SceneTexture}!tmSun@{tmSun}}
+\index{tmSun@{tmSun}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmSun}{tmSun}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Sun\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a212996112183d43e8d0c1d2614320f9d}\label{class_scene_texture_a212996112183d43e8d0c1d2614320f9d}} 
+\index{SceneTexture@{SceneTexture}!tmUranus@{tmUranus}}
+\index{tmUranus@{tmUranus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmUranus}{tmUranus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Uranus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_abf28aad1ceeceb064a118b05ee41ed79}\label{class_scene_texture_abf28aad1ceeceb064a118b05ee41ed79}} 
+\index{SceneTexture@{SceneTexture}!tmVenus@{tmVenus}}
+\index{tmVenus@{tmVenus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tmVenus}{tmVenus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::tm\+Venus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a20d37067a7c9a7e1e45bdaf0e5ca0982}\label{class_scene_texture_a20d37067a7c9a7e1e45bdaf0e5ca0982}} 
+\index{SceneTexture@{SceneTexture}!tNeptune@{tNeptune}}
+\index{tNeptune@{tNeptune}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tNeptune}{tNeptune}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Neptune\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ac05fe1bcd058d9c77766da3bc08c1b45}\label{class_scene_texture_ac05fe1bcd058d9c77766da3bc08c1b45}} 
+\index{SceneTexture@{SceneTexture}!tSaturn@{tSaturn}}
+\index{tSaturn@{tSaturn}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tSaturn}{tSaturn}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Saturn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a47750da1d59ba9a37c34baaf6bff49f8}\label{class_scene_texture_a47750da1d59ba9a37c34baaf6bff49f8}} 
+\index{SceneTexture@{SceneTexture}!tSkyBox@{tSkyBox}}
+\index{tSkyBox@{tSkyBox}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tSkyBox}{tSkyBox}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Sky\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ae27c6af9e09b61b8b82e42e44dc23995}\label{class_scene_texture_ae27c6af9e09b61b8b82e42e44dc23995}} 
+\index{SceneTexture@{SceneTexture}!tSun@{tSun}}
+\index{tSun@{tSun}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tSun}{tSun}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Sun\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ae85f2fd16e84021ab9d020298af5dc30}\label{class_scene_texture_ae85f2fd16e84021ab9d020298af5dc30}} 
+\index{SceneTexture@{SceneTexture}!tUranus@{tUranus}}
+\index{tUranus@{tUranus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tUranus}{tUranus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Uranus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_ac7404076871e4eccddae3486c0b127e4}\label{class_scene_texture_ac7404076871e4eccddae3486c0b127e4}} 
+\index{SceneTexture@{SceneTexture}!tVenus@{tVenus}}
+\index{tVenus@{tVenus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{tVenus}{tVenus}}
+{\footnotesize\ttfamily G\+Lint Scene\+Texture\+::t\+Venus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_texture_a828f9a79b2003b21d0ce58f4960a608d}\label{class_scene_texture_a828f9a79b2003b21d0ce58f4960a608d}} 
+\index{SceneTexture@{SceneTexture}!venus@{venus}}
+\index{venus@{venus}!SceneTexture@{SceneTexture}}
+\subsubsection{\texorpdfstring{venus}{venus}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_obj_mesh}{Obj\+Mesh}}$>$ Scene\+Texture\+::venus\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objeto responsavel por maior parte dos planetas. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scenetexture_8h}{scenetexture.\+h}}\item 
+\mbox{\hyperlink{scenerunner_8h}{scenerunner.\+h}}\item 
+\mbox{\hyperlink{scenetexture_8cpp}{scenetexture.\+cpp}}\end{DoxyCompactItemize}

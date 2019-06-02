@@ -1,0 +1,107 @@
+\hypertarget{class_scene_runner}{}\section{Scene\+Runner Class Reference}
+\label{class_scene_runner}\index{SceneRunner@{SceneRunner}}
+
+
+{\ttfamily \#include $<$scenerunner.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_runner_adea055db042421bb84452dda5d404b61}{Scene\+Runner}} (const std\+::string \&window\+Title, int width=\mbox{\hyperlink{scenerunner_8h_a2e6ef411e0ff00ad889788b6cde701b5}{W\+I\+N\+\_\+\+W\+I\+D\+TH}}, int height=\mbox{\hyperlink{scenerunner_8h_a0a33b1743038db1adbbf1045aa839b38}{W\+I\+N\+\_\+\+H\+E\+I\+G\+HT}}, int samples=0)
+\item 
+int \mbox{\hyperlink{class_scene_runner_aac9e52b035be76abd82181044f871ccd}{run}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_scene_runner_a4ab05aea0a40be8973af80b1c100846c}{parse\+C\+L\+Args}} (int argc, char $\ast$$\ast$argv, std\+::map$<$ std\+::string, std\+::string $>$ \&scene\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_runner_aaf7581cf0e51977da02c58c088fd1cc2}{main\+Loop}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{class_scene_runner_a3b5f5327fe99c632c23b24e070956412}{window}}, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_scene_runner_a6fa80fefb3e46bed4859000c1a730909}{print\+Help\+Info}} (const char $\ast$exe\+File, std\+::map$<$ std\+::string, std\+::string $>$ \&scene\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_scene_runner_a3b5f5327fe99c632c23b24e070956412}{window}}
+\item 
+int \mbox{\hyperlink{class_scene_runner_aa3be198f21a9fa47bbfe3c8e17f5550e}{fbw}}
+\item 
+int \mbox{\hyperlink{class_scene_runner_adce555fdcb0e5f9da11b29eac57454d9}{fbh}}
+\item 
+I\+Sound\+Engine $\ast$ \mbox{\hyperlink{class_scene_runner_a693a417260ec4a108552dc9e78c1a8d7}{Sound\+Engine}} = create\+Irr\+Klang\+Device()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_runner_adea055db042421bb84452dda5d404b61}\label{class_scene_runner_adea055db042421bb84452dda5d404b61}} 
+\index{SceneRunner@{SceneRunner}!SceneRunner@{SceneRunner}}
+\index{SceneRunner@{SceneRunner}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{SceneRunner()}{SceneRunner()}}
+{\footnotesize\ttfamily Scene\+Runner\+::\+Scene\+Runner (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{window\+Title,  }\item[{int}]{width = {\ttfamily \mbox{\hyperlink{scenerunner_8h_a2e6ef411e0ff00ad889788b6cde701b5}{W\+I\+N\+\_\+\+W\+I\+D\+TH}}},  }\item[{int}]{height = {\ttfamily \mbox{\hyperlink{scenerunner_8h_a0a33b1743038db1adbbf1045aa839b38}{W\+I\+N\+\_\+\+H\+E\+I\+G\+HT}}},  }\item[{int}]{samples = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_runner_aaf7581cf0e51977da02c58c088fd1cc2}\label{class_scene_runner_aaf7581cf0e51977da02c58c088fd1cc2}} 
+\index{SceneRunner@{SceneRunner}!mainLoop@{mainLoop}}
+\index{mainLoop@{mainLoop}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{mainLoop()}{mainLoop()}}
+{\footnotesize\ttfamily void Scene\+Runner\+::main\+Loop (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_runner_a4ab05aea0a40be8973af80b1c100846c}\label{class_scene_runner_a4ab05aea0a40be8973af80b1c100846c}} 
+\index{SceneRunner@{SceneRunner}!parseCLArgs@{parseCLArgs}}
+\index{parseCLArgs@{parseCLArgs}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{parseCLArgs()}{parseCLArgs()}}
+{\footnotesize\ttfamily static std\+::string Scene\+Runner\+::parse\+C\+L\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{scene\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_scene_runner_a6fa80fefb3e46bed4859000c1a730909}\label{class_scene_runner_a6fa80fefb3e46bed4859000c1a730909}} 
+\index{SceneRunner@{SceneRunner}!printHelpInfo@{printHelpInfo}}
+\index{printHelpInfo@{printHelpInfo}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{printHelpInfo()}{printHelpInfo()}}
+{\footnotesize\ttfamily static void Scene\+Runner\+::print\+Help\+Info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{exe\+File,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{scene\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_runner_aac9e52b035be76abd82181044f871ccd}\label{class_scene_runner_aac9e52b035be76abd82181044f871ccd}} 
+\index{SceneRunner@{SceneRunner}!run@{run}}
+\index{run@{run}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int Scene\+Runner\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_runner_adce555fdcb0e5f9da11b29eac57454d9}\label{class_scene_runner_adce555fdcb0e5f9da11b29eac57454d9}} 
+\index{SceneRunner@{SceneRunner}!fbh@{fbh}}
+\index{fbh@{fbh}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{fbh}{fbh}}
+{\footnotesize\ttfamily int Scene\+Runner\+::fbh\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_runner_aa3be198f21a9fa47bbfe3c8e17f5550e}\label{class_scene_runner_aa3be198f21a9fa47bbfe3c8e17f5550e}} 
+\index{SceneRunner@{SceneRunner}!fbw@{fbw}}
+\index{fbw@{fbw}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{fbw}{fbw}}
+{\footnotesize\ttfamily int Scene\+Runner\+::fbw\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_runner_a693a417260ec4a108552dc9e78c1a8d7}\label{class_scene_runner_a693a417260ec4a108552dc9e78c1a8d7}} 
+\index{SceneRunner@{SceneRunner}!SoundEngine@{SoundEngine}}
+\index{SoundEngine@{SoundEngine}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{SoundEngine}{SoundEngine}}
+{\footnotesize\ttfamily I\+Sound\+Engine$\ast$ Scene\+Runner\+::\+Sound\+Engine = create\+Irr\+Klang\+Device()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_scene_runner_a3b5f5327fe99c632c23b24e070956412}\label{class_scene_runner_a3b5f5327fe99c632c23b24e070956412}} 
+\index{SceneRunner@{SceneRunner}!window@{window}}
+\index{window@{window}!SceneRunner@{SceneRunner}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ Scene\+Runner\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scenerunner_8h}{scenerunner.\+h}}\end{DoxyCompactItemize}

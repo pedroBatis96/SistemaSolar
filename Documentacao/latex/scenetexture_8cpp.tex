@@ -1,0 +1,85 @@
+\hypertarget{scenetexture_8cpp}{}\section{scenetexture.\+cpp File Reference}
+\label{scenetexture_8cpp}\index{scenetexture.cpp@{scenetexture.cpp}}
+{\ttfamily \#include \char`\"{}scenetexture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}texture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb/stb\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$gtc/matrix\+\_\+transform.\+hpp$>$}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{scenetexture_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}
+\item 
+mat4 \mbox{\hyperlink{scenetexture_8cpp_aa896eca296d874b4719e6210a120ebe5}{translate}}
+\item 
+mat4 \mbox{\hyperlink{scenetexture_8cpp_a72467d06af86da2230d0bd24ace66356}{scale}}
+\item 
+mat4 \mbox{\hyperlink{scenetexture_8cpp_a5041bc85ea6f28e6bcfea5bb0a4facad}{rotate}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{scenetexture_8cpp_a283daef060df25d03194c40d7ee6b8dd}{model\+Aux}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{scenetexture_8cpp_ae2230588b3982b9fb920dd7c9907bc9e}{view\+Aux}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{scenetexture_8cpp_a4eeabaaa00dd70930911e6d6978404da}{projection\+Aux}}
+\item 
+float \mbox{\hyperlink{scenetexture_8cpp_ad0da36b2558901e21e7a30f6c227a45e}{x}} = 0
+\item 
+float \mbox{\hyperlink{scenetexture_8cpp_ae1ac1c616c226660e7346dcb25ab8c85}{xplus}} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{scenetexture_8cpp_a283daef060df25d03194c40d7ee6b8dd}\label{scenetexture_8cpp_a283daef060df25d03194c40d7ee6b8dd}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!modelAux@{modelAux}}
+\index{modelAux@{modelAux}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{modelAux}{modelAux}}
+{\footnotesize\ttfamily glm\+::mat4 model\+Aux}
+
+\mbox{\Hypertarget{scenetexture_8cpp_a4eeabaaa00dd70930911e6d6978404da}\label{scenetexture_8cpp_a4eeabaaa00dd70930911e6d6978404da}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!projectionAux@{projectionAux}}
+\index{projectionAux@{projectionAux}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{projectionAux}{projectionAux}}
+{\footnotesize\ttfamily glm\+::mat4 projection\+Aux}
+
+\mbox{\Hypertarget{scenetexture_8cpp_a5041bc85ea6f28e6bcfea5bb0a4facad}\label{scenetexture_8cpp_a5041bc85ea6f28e6bcfea5bb0a4facad}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!rotate@{rotate}}
+\index{rotate@{rotate}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{rotate}{rotate}}
+{\footnotesize\ttfamily mat4 rotate}
+
+\mbox{\Hypertarget{scenetexture_8cpp_a72467d06af86da2230d0bd24ace66356}\label{scenetexture_8cpp_a72467d06af86da2230d0bd24ace66356}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!scale@{scale}}
+\index{scale@{scale}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily mat4 scale}
+
+\mbox{\Hypertarget{scenetexture_8cpp_aa896eca296d874b4719e6210a120ebe5}\label{scenetexture_8cpp_aa896eca296d874b4719e6210a120ebe5}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!translate@{translate}}
+\index{translate@{translate}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{translate}{translate}}
+{\footnotesize\ttfamily mat4 translate}
+
+\mbox{\Hypertarget{scenetexture_8cpp_ae2230588b3982b9fb920dd7c9907bc9e}\label{scenetexture_8cpp_ae2230588b3982b9fb920dd7c9907bc9e}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!viewAux@{viewAux}}
+\index{viewAux@{viewAux}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{viewAux}{viewAux}}
+{\footnotesize\ttfamily glm\+::mat4 view\+Aux}
+
+\mbox{\Hypertarget{scenetexture_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}\label{scenetexture_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!window@{window}}
+\index{window@{window}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ window}
+
+\mbox{\Hypertarget{scenetexture_8cpp_ad0da36b2558901e21e7a30f6c227a45e}\label{scenetexture_8cpp_ad0da36b2558901e21e7a30f6c227a45e}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!x@{x}}
+\index{x@{x}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float x = 0}
+
+\mbox{\Hypertarget{scenetexture_8cpp_ae1ac1c616c226660e7346dcb25ab8c85}\label{scenetexture_8cpp_ae1ac1c616c226660e7346dcb25ab8c85}} 
+\index{scenetexture.cpp@{scenetexture.cpp}!xplus@{xplus}}
+\index{xplus@{xplus}!scenetexture.cpp@{scenetexture.cpp}}
+\subsubsection{\texorpdfstring{xplus}{xplus}}
+{\footnotesize\ttfamily float xplus = 100}
+

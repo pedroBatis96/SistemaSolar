@@ -1,4 +1,15 @@
-﻿  scenetexture.cpp
+﻿  glad.cpp
+  glslprogram.cpp
+  glutils.cpp
+  main.cpp
+  objmesh.cpp
+C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\objmesh.cpp(149,39): warning C4018:  '<': signed/unsigned mismatch
+  plane.cpp
+  scenetexture.cpp
+C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\objmesh.cpp(169,23): warning C4018:  '<': signed/unsigned mismatch
 C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(323,55): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+  texture.cpp
+  trianglemesh.cpp
+  Generating Code...
 C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\SolarSystem\scenetexture.cpp(323,48): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
   SolarSystem.vcxproj -> C:\Users\batpe\Desktop\4\Cg\git\SistemaSolar\SolarSystem\Debug\SolarSystem.exe

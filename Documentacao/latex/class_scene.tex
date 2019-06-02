@@ -1,0 +1,171 @@
+\hypertarget{class_scene}{}\section{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+Inheritance diagram for Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\item 
+virtual \mbox{\hyperlink{class_scene_aa0a5be58e2ee2d1fdafc5fb46b5e661e}{$\sim$\+Scene}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a30001708297b0c60e30ae7c43acfb037}{set\+Dimensions}} (int w, int h)
+\item 
+virtual void \mbox{\hyperlink{class_scene_ae76b830c1156bb40bd744afb63776be2}{init\+Scene}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_scene_aafa9ccf4d019005fdd41672afd13a7a9}{update}} (float t)=0
+\item 
+virtual void \mbox{\hyperlink{class_scene_a823f4cd60d27932ee16f74adb0421ff6}{render}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_scene_a454bd0a09c125201fbb32e15d4f62fa3}{resize}} (int, int)=0
+\item 
+void \mbox{\hyperlink{class_scene_a676f7cbc5f768869e9e5f318b1bc5730}{animate}} (bool value)
+\item 
+bool \mbox{\hyperlink{class_scene_a72325333f1f2062afc3477b0e325ebec}{animating}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_scene_a99ea310cee6775f4f5bef1940e647cf1}{width}}
+\item 
+int \mbox{\hyperlink{class_scene_a03e1d101ff6c2dbbe8da3ba812cde0f7}{height}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_scene_adb9af7d1ae176f7dd37ae98dd8c17f33}{model}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_scene_a0f02dd92fafa0ad6e820afb9214393c2}{view}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_scene_a866fbd2d4a47a2e78675f8c16da96b6e}{projection}}
+\item 
+bool \mbox{\hyperlink{class_scene_ac9faebc03e9de1f056c399cd57142044}{m\+\_\+animate}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\label{class_scene_ad10176d75a9cc0da56626f682d083507}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_aa0a5be58e2ee2d1fdafc5fb46b5e661e}\label{class_scene_aa0a5be58e2ee2d1fdafc5fb46b5e661e}} 
+\index{Scene@{Scene}!````~Scene@{$\sim$Scene}}
+\index{````~Scene@{$\sim$Scene}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{$\sim$Scene()}{~Scene()}}
+{\footnotesize\ttfamily virtual Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_a676f7cbc5f768869e9e5f318b1bc5730}\label{class_scene_a676f7cbc5f768869e9e5f318b1bc5730}} 
+\index{Scene@{Scene}!animate@{animate}}
+\index{animate@{animate}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily void Scene\+::animate (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_a72325333f1f2062afc3477b0e325ebec}\label{class_scene_a72325333f1f2062afc3477b0e325ebec}} 
+\index{Scene@{Scene}!animating@{animating}}
+\index{animating@{animating}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{animating()}{animating()}}
+{\footnotesize\ttfamily bool Scene\+::animating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_ae76b830c1156bb40bd744afb63776be2}\label{class_scene_ae76b830c1156bb40bd744afb63776be2}} 
+\index{Scene@{Scene}!initScene@{initScene}}
+\index{initScene@{initScene}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{initScene()}{initScene()}}
+{\footnotesize\ttfamily virtual void Scene\+::init\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Load textures, initialize shaders, etc. 
+
+Implemented in \mbox{\hyperlink{class_scene_texture_a22fb3251dd146c10643ca0af54b10bd5}{Scene\+Texture}}.
+
+\mbox{\Hypertarget{class_scene_a823f4cd60d27932ee16f74adb0421ff6}\label{class_scene_a823f4cd60d27932ee16f74adb0421ff6}} 
+\index{Scene@{Scene}!render@{render}}
+\index{render@{render}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Scene\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Draw your scene. 
+
+Implemented in \mbox{\hyperlink{class_scene_texture_ab988e3452c65e9b999a80764905159c4}{Scene\+Texture}}.
+
+\mbox{\Hypertarget{class_scene_a454bd0a09c125201fbb32e15d4f62fa3}\label{class_scene_a454bd0a09c125201fbb32e15d4f62fa3}} 
+\index{Scene@{Scene}!resize@{resize}}
+\index{resize@{resize}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void Scene\+::resize (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called when screen is resized 
+
+Implemented in \mbox{\hyperlink{class_scene_texture_a25d792c7e4f5eba8f9c04b28077c6804}{Scene\+Texture}}.
+
+\mbox{\Hypertarget{class_scene_a30001708297b0c60e30ae7c43acfb037}\label{class_scene_a30001708297b0c60e30ae7c43acfb037}} 
+\index{Scene@{Scene}!setDimensions@{setDimensions}}
+\index{setDimensions@{setDimensions}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{setDimensions()}{setDimensions()}}
+{\footnotesize\ttfamily void Scene\+::set\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_aafa9ccf4d019005fdd41672afd13a7a9}\label{class_scene_aafa9ccf4d019005fdd41672afd13a7a9}} 
+\index{Scene@{Scene}!update@{update}}
+\index{update@{update}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Scene\+::update (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This is called prior to every frame. Use this to update your animation. 
+
+Implemented in \mbox{\hyperlink{class_scene_texture_a345ac4834ce9785ed91e24d25046a835}{Scene\+Texture}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_a03e1d101ff6c2dbbe8da3ba812cde0f7}\label{class_scene_a03e1d101ff6c2dbbe8da3ba812cde0f7}} 
+\index{Scene@{Scene}!height@{height}}
+\index{height@{height}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Scene\+::height}
+
+\mbox{\Hypertarget{class_scene_ac9faebc03e9de1f056c399cd57142044}\label{class_scene_ac9faebc03e9de1f056c399cd57142044}} 
+\index{Scene@{Scene}!m\_animate@{m\_animate}}
+\index{m\_animate@{m\_animate}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{m\_animate}{m\_animate}}
+{\footnotesize\ttfamily bool Scene\+::m\+\_\+animate\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_scene_adb9af7d1ae176f7dd37ae98dd8c17f33}\label{class_scene_adb9af7d1ae176f7dd37ae98dd8c17f33}} 
+\index{Scene@{Scene}!model@{model}}
+\index{model@{model}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::model\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_scene_a866fbd2d4a47a2e78675f8c16da96b6e}\label{class_scene_a866fbd2d4a47a2e78675f8c16da96b6e}} 
+\index{Scene@{Scene}!projection@{projection}}
+\index{projection@{projection}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{projection}{projection}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::projection\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_scene_a0f02dd92fafa0ad6e820afb9214393c2}\label{class_scene_a0f02dd92fafa0ad6e820afb9214393c2}} 
+\index{Scene@{Scene}!view@{view}}
+\index{view@{view}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily glm\+::mat4 Scene\+::view\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_scene_a99ea310cee6775f4f5bef1940e647cf1}\label{class_scene_a99ea310cee6775f4f5bef1940e647cf1}} 
+\index{Scene@{Scene}!width@{width}}
+\index{width@{width}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Scene\+::width}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scene_8h}{scene.\+h}}\end{DoxyCompactItemize}

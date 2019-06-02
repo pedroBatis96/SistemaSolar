@@ -171,7 +171,7 @@ void planetInformation(int selected) {
 	}
 }
 
-
+///Funcao responsavel pela atribuicao de funcoes a teclas
 void  SceneTexture::keyfunc(GLFWwindow* window, int key, int scancode, int action, int mods) {
 	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
 		if (!isMenu) {
@@ -202,7 +202,7 @@ void  SceneTexture::keyfunc(GLFWwindow* window, int key, int scancode, int actio
 		}
 	}
 	if (key == GLFW_KEY_S && action == GLFW_PRESS) {
-		if (camx < 3300) {
+		if (camx < 2900) {
 			camx += 50.0f;
 		}
 	}
