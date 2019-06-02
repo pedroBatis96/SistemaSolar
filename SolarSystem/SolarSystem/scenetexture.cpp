@@ -54,10 +54,10 @@ float SceneTexture::planetLight[8][9]{
 	{0.2f, 0.2f, 0.2f,0.1f, 0.1f, 0.1f,0.2f, 0.2f, 0.2f}
 };
 float SceneTexture::planetRadius[8] = {
-	0.18f,//Mercurio
-	0.44f,//Venus
-	0.46f,//Terra
-	0.24f,//Marte
+	0.38f,//Mercurio
+	0.64f,//Venus
+	0.66f,//Terra
+	0.44f,//Marte
 	5.15f,//Jupiter
 	3.0f,//Saturno
 	1.86f,//Urano
@@ -299,20 +299,19 @@ float SceneTexture::asteroidDistance[32] = {
 
 //Lua--------------------------------
 float SceneTexture::moonTransCenter[1][3] = { SceneTexture::planetlocations[2][0], SceneTexture::planetlocations[2][1], SceneTexture::planetlocations[2][2] };
-float SceneTexture::moonlocations[1][3] = { { moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 30.0f} };
-float SceneTexture::moonDefaultLocation[1][3] = { { moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 30.0f} };
+float SceneTexture::moonlocations[1][3] = { { moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 50.0f} };
+float SceneTexture::moonDefaultLocation[1][3] = { { moonTransCenter[0][0], moonTransCenter[0][1], moonTransCenter[0][2] + 50.0f} };
 GLfloat SceneTexture::moonRotation = 10.f;
 float SceneTexture::moonRadius[1] = { 0.1f };
 float SceneTexture::moonAngle[1] = { 0.0f };
 float SceneTexture::moonLight[1][9]{ {0.9f, 0.9f, 0.9f,0.95f, 0.95f, 0.95f,0.1f, 0.1f, 0.1f} };
-float SceneTexture::moonDistance[1] = { 30.0f };
+float SceneTexture::moonDistance[1] = { 50.0f };
 float SceneTexture::moonSpeed[1] = { 100.0f };
 
 //Background------------------------------------------------------------------------
 float SceneTexture::bkLocation[1][3]{ {0.0f, 0.0f , 0.0f} };
 float SceneTexture::bkRadius = 150.0f;
 float SceneTexture::bkLight[1][9]{ { 1.0f, 1.0f, 1.0f,1.0f, 1.0f, 1.0f,1.0f, 1.0f, 1.0f} };
-float SceneTexture::bkColor[1][3] = { {1.0f, 1.0f , 1.0f}, };
 
 
 //Sol-------------------------------------------------------------------------------
@@ -320,7 +319,6 @@ float SceneTexture::starLocation[1][3]{ {0.0f, 0.0f , 0.0f} };
 float SceneTexture::starRadius = 10.0f;
 float SceneTexture::starLight[1][9]{ { 1.f, 1.f, 1.f,1.f, 1.f, 1.f,1.f, 1.f, 1.f} };
 GLfloat SceneTexture::rotation = 100.f;
-float SceneTexture::starColor[1][3] = { {1.0f, 1.0f , 1.0f}, };
 
 SceneTexture::SceneTexture() {
 	venus = ObjMesh::load("../media/objects/venus.obj", true);

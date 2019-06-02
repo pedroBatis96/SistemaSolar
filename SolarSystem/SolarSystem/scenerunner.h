@@ -191,7 +191,7 @@ void  SceneTexture::keyfunc(GLFWwindow* window, int key, int scancode, int actio
 
 	}
 	if (key == GLFW_KEY_S && action == GLFW_REPEAT) {
-		if (camx < 3300) {
+		if (camx < 2900) {
 			camx += 100.0f;
 		}
 	}
